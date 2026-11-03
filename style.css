@@ -367,27 +367,75 @@ body.lang-ta .door-title {
   background: linear-gradient(90deg, transparent, var(--gold-light), transparent);
 }
 
+/* Auspicious Royal Glass Plate for Couple Names on Entrance Door */
+.door-names-box {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(6px, 1.5vw, 10px);
+  background: linear-gradient(135deg, rgba(6, 14, 30, 0.94) 0%, rgba(12, 28, 60, 0.96) 50%, rgba(6, 14, 30, 0.94) 100%);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1.5px solid var(--gold-light);
+  border-radius: 9999px;
+  padding: clamp(5px, 1.2vh, 9px) clamp(12px, 3.5vw, 22px);
+  margin: 0.1rem auto 0.35rem auto;
+  box-shadow: 
+    0 8px 25px rgba(0, 0, 0, 0.8), 
+    0 0 18px rgba(212, 175, 55, 0.35), 
+    inset 0 1px 2px rgba(255, 255, 255, 0.35);
+  max-width: 95%;
+  z-index: 5;
+}
+
+.door-name-sparkle {
+  color: var(--gold-light);
+  font-size: clamp(0.72rem, 1.5vh, 0.85rem);
+  flex-shrink: 0;
+  text-shadow: 0 0 8px rgba(255, 215, 79, 0.85);
+}
+
 .door-names {
   font-family: var(--font-royal);
-  font-size: clamp(0.95rem, 2.2vh, 1.35rem);
-  letter-spacing: 1px;
-  margin-bottom: 0.35rem;
+  font-size: clamp(0.92rem, 2.1vh, 1.28rem);
+  letter-spacing: 0.8px;
   color: #FFFDF5;
-  text-shadow: 0 2px 12px rgba(0,0,0,0.8);
-  font-weight: 700;
-  line-height: 1.15;
+  font-weight: 800;
+  line-height: 1.2;
+  margin: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  text-align: center;
+  gap: 3px;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.9), 0 0 10px rgba(255, 215, 79, 0.45);
 }
+
 body.lang-ta .door-names {
   font-family: var(--font-tamil);
-  font-size: clamp(1.05rem, 2.4vh, 1.45rem);
+  font-size: clamp(0.98rem, 2.3vh, 1.35rem);
   font-weight: 800;
+  letter-spacing: 0.5px;
+}
+
+.d-name {
+  display: inline-block;
+  white-space: nowrap;
+  background: linear-gradient(180deg, #FFFFFF 0%, #FFFDF5 60%, #FFE082 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.85));
 }
 
 .door-amp {
   color: var(--gold-light);
   margin: 0 4px;
   font-family: var(--font-cursive);
-  font-size: 1.3em;
+  font-size: 1.35em;
+  line-height: 1;
+  text-shadow: 0 0 10px rgba(255, 215, 79, 0.85);
+  vertical-align: middle;
 }
 
 /* Live Real-Time Countdown Strip on Door (Dark Pill - Compact Single Page) */
@@ -488,15 +536,6 @@ body.lang-ta .btn-magic-note {
   font-size: 0.92em;
 }
 
-.door-date {
-  margin-top: 0.15rem;
-  font-size: clamp(0.72rem, 1.4vh, 0.85rem);
-  color: var(--gold-light);
-  letter-spacing: 1.5px;
-  font-weight: 600;
-  text-shadow: 0 1px 4px rgba(0,0,0,0.8);
-}
-
 .btn-shine {
   position: absolute;
   top: 0;
@@ -512,13 +551,46 @@ body.lang-ta .btn-magic-note {
   100% { left: 220%; }
 }
 
+/* Auspicious Glass Date Capsule on Entrance Door Screen */
 .door-date {
-  margin-top: 1.1rem;
-  font-size: clamp(0.85rem, 2.2vw, 1rem);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  margin-top: clamp(0.75rem, 1.8vh, 1.15rem);
+  padding: clamp(5px, 1vh, 8px) clamp(14px, 3.5vw, 22px);
+  font-size: clamp(0.78rem, 2.2vw, 0.94rem);
+  font-weight: 700;
+  letter-spacing: 1.6px;
+  color: #FFFDF5;
+  background: linear-gradient(135deg, rgba(6, 14, 30, 0.88) 0%, rgba(12, 28, 56, 0.92) 50%, rgba(6, 14, 30, 0.88) 100%);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1.2px solid rgba(255, 215, 79, 0.5);
+  border-radius: 9999px;
+  box-shadow: 
+    0 6px 20px rgba(0, 0, 0, 0.75),
+    0 0 14px rgba(212, 175, 55, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.95);
+  max-width: 94%;
+  white-space: nowrap;
+}
+
+.door-date::before,
+.door-date::after {
+  content: '✦';
   color: var(--gold-light);
-  letter-spacing: 2px;
+  font-size: 0.68em;
+  opacity: 0.9;
+  filter: drop-shadow(0 0 3px rgba(255, 215, 79, 0.6));
+}
+
+body.lang-ta .door-date {
+  font-family: var(--font-tamil);
+  letter-spacing: 0.5px;
+  font-size: clamp(0.72rem, 2vw, 0.88rem);
   font-weight: 600;
-  text-shadow: 0 1px 4px rgba(0,0,0,0.8);
 }
 
 /* Entrance Screen Mobile & Small Viewport Responsive Adaptations */
@@ -536,11 +608,25 @@ body.lang-ta .btn-magic-note {
   .door-panel-deco {
     background-size: 28px 28px;
   }
+  .door-names-box {
+    padding: 3px 10px;
+    gap: 4px;
+  }
   .door-names {
-    font-size: 0.95rem;
+    font-size: 0.85rem;
+  }
+  body.lang-ta .door-names {
+    font-size: 0.88rem;
   }
   .d-num {
     font-size: 1.1rem;
+  }
+  .door-date {
+    font-size: 0.72rem;
+    padding: 3px 10px;
+    letter-spacing: 0.8px;
+    gap: 4px;
+    white-space: normal;
   }
 }
 
@@ -556,7 +642,11 @@ body.lang-ta .btn-magic-note {
   }
   .door-title-box {
     padding: 4px 10px;
-    margin-bottom: 0.2rem;
+    margin-bottom: 0.15rem;
+  }
+  .door-names-box {
+    padding: 3px 10px;
+    margin: 0.05rem auto 0.2rem auto;
   }
   .door-countdown-wrap {
     padding: 4px 8px;
@@ -567,8 +657,9 @@ body.lang-ta .btn-magic-note {
     font-size: 0.85rem;
   }
   .door-date {
-    margin-top: 0.4rem;
-    font-size: 0.8rem;
+    margin-top: 0.35rem;
+    padding: 3px 12px;
+    font-size: 0.76rem;
   }
 }
 
@@ -658,57 +749,66 @@ body.lang-ta .btn-magic-note {
 /* Topbar Mobile View Adaptations */
 @media (max-width: 600px) {
   .topbar-inner {
-    padding: 0 10px;
+    padding: 0 8px;
     gap: 6px;
   }
+  .topbar-monogram {
+    gap: 6px;
+    min-width: 0;
+    flex-shrink: 1;
+  }
   .topbar-names {
-    font-size: 0.82rem;
+    font-size: clamp(0.74rem, 2.7vw, 0.88rem);
     letter-spacing: 0.2px;
+    white-space: nowrap;
   }
   .topbar-mono-icon {
-    width: 24px;
-    height: 24px;
+    width: 22px;
+    height: 22px;
+    flex-shrink: 0;
+  }
+  .topbar-actions {
+    gap: 5px;
+    flex-shrink: 0;
   }
   .glass-pill-btn {
-    padding: 5px 8px;
-    font-size: 0.72rem;
-    gap: 4px;
-  }
-  .topbar-icon {
-    font-size: 1rem;
-  }
-  .petals-btn {
-    padding: 5px 6px;
-  }
-}
-
-@media (max-width: 400px) {
-  .topbar-inner {
-    padding: 0 6px;
-    gap: 4px;
-  }
-  .topbar-names {
-    font-size: 0.74rem;
-    max-width: 135px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-  .glass-pill-btn {
-    padding: 4px 6px;
-    font-size: 0.68rem;
+    padding: 4px 8px;
+    font-size: 0.70rem;
     gap: 3px;
-  }
-}
-
-@media (max-width: 340px) {
-  .topbar-names {
-    font-size: 0.68rem;
-    max-width: 105px;
   }
   #music-btn .ta-only,
   #music-btn .en-only {
     display: none !important;
+  }
+  #music-btn {
+    width: 32px;
+    height: 32px;
+    padding: 0;
+    justify-content: center;
+    border-radius: 50%;
+  }
+  .petals-btn {
+    width: 32px;
+    height: 32px;
+    padding: 0;
+    justify-content: center;
+    border-radius: 50%;
+  }
+  .topbar-icon {
+    font-size: 1.05rem;
+  }
+}
+
+@media (max-width: 380px) {
+  .topbar-inner {
+    padding: 0 4px;
+    gap: 4px;
+  }
+  .topbar-names {
+    font-size: 0.72rem;
+  }
+  .glass-pill-btn {
+    padding: 3px 6px;
   }
 }
 
@@ -756,10 +856,16 @@ body.lang-ta .btn-magic-note {
   pointer-events: none;
 }
 
+@media (max-width: 600px) {
+  .south-indian-toran {
+    height: clamp(34px, 8vw, 46px);
+  }
+}
+
 .real-banana-tree {
   position: fixed;
   bottom: 0;
-  z-index: 90;
+  z-index: 40;
   pointer-events: none;
   width: clamp(90px, 14vw, 220px);
   filter: drop-shadow(0 14px 28px rgba(0,0,0,0.65));
@@ -774,6 +880,36 @@ body.lang-ta .btn-magic-note {
 .real-banana-tree-right {
   right: 0;
   animation: treeSwayRight 6s ease-in-out infinite 0.6s;
+}
+
+@media (max-width: 820px) {
+  .real-banana-tree {
+    position: absolute;
+    top: clamp(70px, 14vw, 120px);
+    bottom: auto;
+    width: clamp(44px, 12vw, 70px);
+    z-index: 5;
+    opacity: 0.92;
+  }
+  .real-banana-tree-left {
+    left: -4px;
+  }
+  .real-banana-tree-right {
+    right: -4px;
+  }
+}
+
+@media (max-width: 480px) {
+  .real-banana-tree {
+    top: clamp(80px, 16vw, 130px);
+    width: clamp(38px, 10vw, 52px);
+  }
+  .real-banana-tree-left {
+    left: -5px;
+  }
+  .real-banana-tree-right {
+    right: -5px;
+  }
 }
 
 .real-banana-img {
@@ -814,6 +950,22 @@ body.lang-ta .btn-magic-note {
     max-width: 100%;
     margin-top: clamp(85px, 14vw, 115px);
     padding: 0 12px;
+  }
+}
+
+@media (max-width: 600px) {
+  .main-wrapper {
+    padding: 0 6px;
+    margin-top: clamp(80px, 13vw, 100px);
+  }
+  .wedding-card-panel {
+    padding: 24px 6px 24px 6px;
+    border-radius: 20px;
+  }
+  .glass-card::after,
+  .wedding-card-panel::after {
+    inset: 4px;
+    border-radius: 16px;
   }
 }
 
@@ -1185,7 +1337,7 @@ body.lang-ta .pavilion-ribbon-bar .ribbon-title {
 .pavilion-couple-wings {
   display: grid;
   grid-template-columns: 1fr auto 1fr;
-  align-items: center;
+  align-items: stretch;
   gap: clamp(10px, 1.8vw, 20px);
   width: 100%;
   max-width: 940px;
@@ -1198,6 +1350,7 @@ body.lang-ta .pavilion-ribbon-bar .ribbon-title {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  align-self: center;
   gap: 4px;
   padding: 0 4px;
   flex-shrink: 0;
@@ -1232,6 +1385,10 @@ body.lang-ta .pavilion-ribbon-bar .ribbon-title {
 /* Individual Wing (Groom / Bride Profile Card) */
 .pavilion-person-wing {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  box-sizing: border-box;
   background: rgba(255, 255, 255, 0.05);
   border: 1.2px solid rgba(255, 215, 79, 0.35);
   border-radius: 18px;
@@ -1343,6 +1500,8 @@ body.lang-en .wing-name {
   flex-direction: column;
   align-items: center;
   gap: 5px;
+  margin-top: auto;
+  width: 100%;
 }
 
 .person-loc {
@@ -1391,20 +1550,260 @@ body.lang-en .wing-name {
   font-size: 0.88rem;
 }
 
+/* ==========================================================================
+   SOUTH INDIAN ROYAL MANDAP STAGE - RESPONSIVE MOBILE VIEW
+   (Maintains Side-by-Side Symmetrical Groom & Bride Wings, Central Knot,
+    Arch Photo & Kuthuvilakku Lamps exactly like Desktop Stage View)
+   ========================================================================== */
 @media (max-width: 820px) {
-  .pavilion-couple-wings {
-    grid-template-columns: 1fr;
-    gap: 14px;
+  .royal-pavilion-frame {
+    padding: clamp(12px, 2vw, 18px) clamp(6px, 1.5vw, 12px);
+    border-radius: 20px;
+    outline-offset: -5px;
+    margin: 0.8rem auto 1.1rem auto;
   }
+
+  .pavilion-top-photo-arch {
+    margin: 0.2rem auto 0.6rem auto;
+  }
+
+  .compact-arch-viewport {
+    width: clamp(170px, 45vw, 240px);
+    border-radius: 20px 20px 14px 14px;
+  }
+
+  .mandap-lamp {
+    width: clamp(24px, 5.5vw, 36px);
+    bottom: 6px;
+  }
+  .mandap-lamp.lamp-left { left: 6px; }
+  .mandap-lamp.lamp-right { right: 6px; }
+
+  .pavilion-couple-wings {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: stretch;
+    gap: clamp(4px, 1.5vw, 12px);
+    width: 100%;
+    margin-top: 0.6rem;
+  }
+
   .groom-wing {
     order: 1;
   }
+
   .pavilion-knot-centerpiece {
     order: 2;
-    margin: 4px auto;
+    padding: 0 2px;
+    flex-shrink: 0;
+    align-self: center;
   }
+
   .bride-wing {
     order: 3;
+  }
+
+  .pavilion-person-wing {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: clamp(10px, 1.8vw, 16px) clamp(6px, 1.2vw, 10px);
+    border-radius: 16px;
+  }
+}
+
+@media (max-width: 600px) {
+  .royal-pavilion-frame {
+    padding: 12px 5px 14px 5px;
+    border-radius: 18px;
+    outline-offset: -5px;
+  }
+
+  .pavilion-ribbon-bar {
+    padding: 4px 14px;
+    margin-bottom: 8px;
+    gap: 6px;
+  }
+  .pavilion-ribbon-bar .ribbon-title {
+    font-size: clamp(0.70rem, 2vw, 0.80rem);
+    letter-spacing: 0.5px;
+  }
+  .pavilion-ribbon-bar .ribbon-sparkle {
+    font-size: 0.72rem;
+  }
+
+  .compact-arch-viewport {
+    width: clamp(160px, 46vw, 215px);
+    border-radius: 18px 18px 12px 12px;
+  }
+
+  .mandap-lamp {
+    width: clamp(22px, 5.5vw, 28px);
+    bottom: 5px;
+  }
+  .mandap-lamp.lamp-left { left: 4px; }
+  .mandap-lamp.lamp-right { right: 4px; }
+
+  .pavilion-couple-wings {
+    grid-template-columns: 1fr auto 1fr;
+    align-items: stretch;
+    gap: 4px;
+  }
+
+  .pavilion-person-wing {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 8px 4px 10px 4px;
+    border-radius: 14px;
+  }
+
+  .wing-role-badge {
+    font-size: 0.62rem;
+    letter-spacing: 0.5px;
+    margin-bottom: 2px;
+    gap: 3px;
+  }
+  .wing-role-badge .material-symbols-outlined {
+    font-size: 0.80rem;
+  }
+
+  .wing-name {
+    font-size: clamp(0.84rem, 2.7vw, 1.02rem);
+    line-height: 1.22;
+    margin-bottom: 0.2rem;
+  }
+  body.lang-en .wing-name {
+    font-size: clamp(0.80rem, 2.4vw, 0.95rem);
+  }
+
+  .degree-tag {
+    font-size: 0.58rem;
+    padding: 1px 3px;
+    margin-left: 2px;
+  }
+
+  .wing-work-pill {
+    font-size: clamp(0.58rem, 1.8vw, 0.66rem);
+    padding: 2px 4px;
+    border-radius: 6px;
+    margin-bottom: 0.35rem;
+    gap: 3px;
+    white-space: normal;
+    text-align: center;
+    line-height: 1.15;
+    max-width: 100%;
+  }
+  .wing-work-pill .material-symbols-outlined {
+    font-size: 0.70rem;
+  }
+
+  .wing-divider {
+    width: 90%;
+    margin: 0.3rem auto 0.4rem auto;
+  }
+
+  .wing-parents-block {
+    margin-bottom: 0.35rem;
+  }
+  .parents-label {
+    font-size: 0.60rem;
+    margin-bottom: 1px;
+    letter-spacing: 0.5px;
+  }
+  .parents-names {
+    font-size: clamp(0.66rem, 2vw, 0.74rem);
+    line-height: 1.25;
+  }
+
+  .wing-contact-block {
+    gap: 4px;
+    margin-top: auto;
+    width: 100%;
+  }
+  .person-loc {
+    font-size: clamp(0.62rem, 1.8vw, 0.68rem);
+    line-height: 1.2;
+    text-align: center;
+    gap: 2px;
+  }
+  .person-loc .material-symbols-outlined {
+    font-size: 0.70rem;
+  }
+
+  .person-call-wrap {
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
+    width: 100%;
+  }
+
+  .person-call-btn {
+    font-size: clamp(0.62rem, 1.8vw, 0.68rem);
+    padding: 3px 5px;
+    border-radius: 10px;
+    gap: 2px;
+    max-width: 100%;
+    justify-content: center;
+    white-space: nowrap;
+  }
+  .person-call-btn .material-symbols-outlined {
+    font-size: 0.72rem;
+  }
+
+  .pavilion-knot-centerpiece {
+    gap: 2px;
+    padding: 0 1px;
+    align-self: center;
+  }
+  .knot-vatti-icon {
+    width: clamp(36px, 9vw, 46px);
+    height: clamp(36px, 9vw, 46px);
+  }
+  .saree-vatti-img {
+    width: clamp(30px, 7.5vw, 38px);
+  }
+  .grand-weds-text {
+    font-size: clamp(1.1rem, 3.2vw, 1.35rem);
+  }
+}
+
+@media (max-width: 350px) {
+  .pavilion-couple-wings {
+    align-items: stretch;
+    gap: 2px;
+  }
+  .pavilion-person-wing {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 6px 2px 8px 2px;
+  }
+  .wing-contact-block {
+    margin-top: auto;
+  }
+  .pavilion-knot-centerpiece {
+    align-self: center;
+  }
+  .wing-name {
+    font-size: 0.78rem;
+  }
+  .parents-names {
+    font-size: 0.64rem;
+  }
+  .person-call-btn {
+    font-size: 0.60rem;
+    padding: 2px 4px;
+  }
+  .knot-vatti-icon {
+    width: 32px;
+    height: 32px;
+  }
+  .saree-vatti-img {
+    width: 26px;
+  }
+  .grand-weds-text {
+    font-size: 0.95rem;
   }
 }
 
@@ -1451,12 +1850,6 @@ body.lang-en .wing-name {
   .arch-portrait-viewport {
     border-radius: 16px 16px 12px 12px;
   }
-  .mandap-lamp {
-    width: 38px;
-    bottom: 8px;
-  }
-  .mandap-lamp.lamp-left { left: 8px; }
-  .mandap-lamp.lamp-right { right: 8px; }
   .royal-person-card {
     padding: 1.2rem 1rem;
   }
@@ -1502,15 +1895,82 @@ body.lang-en .wing-name {
   touch-action: none;
 }
 
-@media (max-width: 440px) {
+@media (max-width: 600px) {
+  .scratch-glass-card {
+    padding: 34px 10px 24px 10px;
+  }
+  .scratch-section {
+    scroll-margin-top: 110px;
+    padding: 20px 8px;
+  }
+  .section-sub-title {
+    font-size: clamp(1.15rem, 3.8vw, 1.35rem);
+    margin-bottom: 4px;
+  }
+  .scratch-instruction-note {
+    font-size: clamp(0.76rem, 2.4vw, 0.84rem);
+    margin-bottom: 10px;
+  }
   .scratch-card-container {
-    max-width: 100%;
-    height: 350px;
+    max-width: 340px;
+    height: 400px;
+    margin: 10px auto 0 auto;
+    border-radius: 18px;
+  }
+  .scratch-revealed-content {
+    padding: 12px 10px;
+    justify-content: space-between;
+  }
+  .revealed-badge {
+    font-size: 0.72rem;
+    padding: 3px 12px;
+    margin-bottom: 2px;
+  }
+  .revealed-day-text {
+    font-size: clamp(0.86rem, 2.8vw, 0.98rem);
+  }
+  .revealed-big-date {
+    font-size: clamp(3.4rem, 11vw, 4.2rem);
+    line-height: 0.9;
+    margin: 2px 0;
+  }
+  .revealed-month-year {
+    font-size: clamp(0.88rem, 2.8vw, 1rem);
+    margin-bottom: 6px;
+  }
+  .revealed-details-list {
+    gap: 5px;
+    width: 100%;
+  }
+  .revealed-detail-pill {
+    padding: 4px 8px;
+    font-size: clamp(0.70rem, 2.2vw, 0.76rem);
+    gap: 5px;
+    line-height: 1.2;
+  }
+  .pill-icon {
+    font-size: 0.95rem;
+  }
+  .scratch-controls {
+    margin-top: 10px;
+  }
+  .instant-reveal-btn {
+    padding: 6px 16px;
+    font-size: 0.78rem;
   }
 }
+
 @media (max-width: 360px) {
   .scratch-card-container {
-    height: 320px;
+    max-width: 310px;
+    height: 385px;
+  }
+  .revealed-big-date {
+    font-size: 3.2rem;
+  }
+  .revealed-detail-pill {
+    padding: 3px 6px;
+    font-size: 0.68rem;
   }
 }
 
@@ -2298,6 +2758,16 @@ body.lang-ta .footer-quote {
   background: var(--gold-foil);
   color: #061124;
   transform: translateY(-2px);
+}
+
+@media (max-width: 600px) {
+  .back-to-top {
+    bottom: 16px;
+    right: 14px;
+    width: 38px;
+    height: 38px;
+    z-index: 999;
+  }
 }
 
 /* ==========================================================================
