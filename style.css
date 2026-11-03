@@ -1405,7 +1405,7 @@ body.lang-ta .banner-role-badge {
   font-size: 0.95rem;
 }
 
-/* Couple Names: Regal Gold Metallic Sheen, Symmetrically Centered */
+/* Couple Names: Pristine Uniform Warm Ivory with Regal Shadow & Gold Ambience */
 .banner-couple-name {
   font-family: var(--font-tamil);
   font-size: clamp(1rem, 2.1vw, 1.35rem);
@@ -1420,10 +1420,7 @@ body.lang-ta .banner-role-badge {
   text-align: center;
   width: 100%;
   text-wrap: balance;
-  background: linear-gradient(180deg, #FFFFFF 0%, #FFFDF5 55%, #FFD54F 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.9));
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.95), 0 0 10px rgba(255, 215, 79, 0.35);
 }
 body.lang-en .banner-couple-name {
   font-family: var(--font-royal);
