@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ashokkumar ♥ Pradeepa | Wedding Invitation</title>
+  <meta name="description" content="You are cordially invited to celebrate the wedding of R. Ashokkumar & S. Pradeepa on November 13, 2026 at GS Mahal, Ramanathapuram."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Great+Vibes&family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Noto+Serif+Tamil:wght@300;400;600&display=swap"/>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<!-- Confetti Container (fixed overlay, above everything) -->
+<div id="confetti-container" style="position:fixed;inset:0;pointer-events:none;z-index:99998;overflow:hidden;"></div>
+
+<!-- ══════════════════ DOOR SCREEN ══════════════════ -->
+<div id="door-screen">
+  <div class="door-bg-overlay"></div>
+  <div class="door-toran-top"></div>
+  <div class="door-sparkles" id="door-sparkles"></div>
+  <div class="door-content">
+    <div class="door-om-wrap"><span class="door-om">🕉️</span></div>
+    <p class="door-invocation">ஸ்ரீ விநாயகர் துணை</p>
+    <p class="door-tamil">வாழ்க வளமுடன்</p>
+    <h1 class="door-title">Wedding Invitation</h1>
+    <div class="door-divider"><span>✦</span><span class="door-divider-line"></span><span>✦</span></div>
+    <p class="door-names">R. Ashokkumar <span class="door-amp">&amp;</span> S. Pradeepa</p>
+    <button id="open-btn" onclick="openInvitation()">
+      <span class="material-symbols-outlined btn-icon-ms">mail</span>
+      <span>Open Invitation</span>
+      <div class="btn-shine"></div>
+    </button>
+    <p class="door-date">13 · November · 2026</p>
+  </div>
+  <div class="door-left">
+    <div class="door-panel-deco"></div>
+    <div class="door-brass-knocker"></div>
+  </div>
+  <div class="door-right">
+    <div class="door-panel-deco"></div>
+    <div class="door-brass-knocker"></div>
+  </div>
+  <div class="petals-container" id="door-petals"></div>
+</div>
+
+<!-- ══════════════════ MAIN INVITATION ══════════════════ -->
+<div id="main-invitation" class="hidden">
+
+  <!-- ─── HERO ─── -->
+  <section id="hero" class="hero-section">
+    <!-- Temple Real Image -->
+    <div class="temple-image-wrap">
+      <img src="temple.png" alt="South Indian Temple" class="temple-img"/>
+      <div class="temple-overlay"></div>
+      <!-- Traditional South Indian Mango Leaf & Marigold Toranam -->
+      <div class="south-indian-toran"></div>
+      <!-- Real Animated Banana Trees (Mangala Vazhai Maram - Pair of 2) -->
+      <div class="real-banana-tree real-banana-tree-left">
+        <img src="banana-tree-vazhai.png" alt="Traditional Wedding Mangala Vazhai Maram" class="real-banana-img"/>
+      </div>
+      <div class="real-banana-tree real-banana-tree-right">
+        <img src="banana-tree-vazhai.png" alt="Traditional Wedding Mangala Vazhai Maram" class="real-banana-img flip-h"/>
+      </div>
+
+      <!-- Oil Lamps -->
+      <div class="lamp lamp-left">🪔</div>
+      <div class="lamp lamp-right">🪔</div>
+    </div>
+
+    <!-- ── Hero Glass Card (Warm Ivory Silk Panel with Ornate Gold Corners) ── -->
+    <div class="hero-glass-card fade-in-up">
+      <div class="card-corners">
+        <div class="corner-ornament co-tl">
+          <svg viewBox="0 0 44 44" width="34" height="34"><path d="M2 42 L2 14 Q2 2 14 2 L42 2" fill="none" stroke="#C8942A" stroke-width="2.2" stroke-linecap="round"/><path d="M7 42 L7 16 Q7 7 16 7 L42 7" fill="none" stroke="#E5B85C" stroke-width="1.2" stroke-linecap="round"/><circle cx="15" cy="15" r="3.5" fill="#C8942A"/><circle cx="15" cy="15" r="1.5" fill="#FFF2B8"/><circle cx="26" cy="11" r="2" fill="#C8942A"/><circle cx="11" cy="26" r="2" fill="#C8942A"/><path d="M15 11 Q15 4 22 7" fill="none" stroke="#C8942A" stroke-width="1.2"/><path d="M11 15 Q4 15 7 22" fill="none" stroke="#C8942A" stroke-width="1.2"/></svg>
+        </div>
+        <div class="corner-ornament co-tr">
+          <svg viewBox="0 0 44 44" width="34" height="34" style="transform:scaleX(-1)"><path d="M2 42 L2 14 Q2 2 14 2 L42 2" fill="none" stroke="#C8942A" stroke-width="2.2" stroke-linecap="round"/><path d="M7 42 L7 16 Q7 7 16 7 L42 7" fill="none" stroke="#E5B85C" stroke-width="1.2" stroke-linecap="round"/><circle cx="15" cy="15" r="3.5" fill="#C8942A"/><circle cx="15" cy="15" r="1.5" fill="#FFF2B8"/><circle cx="26" cy="11" r="2" fill="#C8942A"/><circle cx="11" cy="26" r="2" fill="#C8942A"/><path d="M15 11 Q15 4 22 7" fill="none" stroke="#C8942A" stroke-width="1.2"/><path d="M11 15 Q4 15 7 22" fill="none" stroke="#C8942A" stroke-width="1.2"/></svg>
+        </div>
+        <div class="corner-ornament co-bl">
+          <svg viewBox="0 0 44 44" width="34" height="34" style="transform:scaleY(-1)"><path d="M2 42 L2 14 Q2 2 14 2 L42 2" fill="none" stroke="#C8942A" stroke-width="2.2" stroke-linecap="round"/><path d="M7 42 L7 16 Q7 7 16 7 L42 7" fill="none" stroke="#E5B85C" stroke-width="1.2" stroke-linecap="round"/><circle cx="15" cy="15" r="3.5" fill="#C8942A"/><circle cx="15" cy="15" r="1.5" fill="#FFF2B8"/><circle cx="26" cy="11" r="2" fill="#C8942A"/><circle cx="11" cy="26" r="2" fill="#C8942A"/><path d="M15 11 Q15 4 22 7" fill="none" stroke="#C8942A" stroke-width="1.2"/><path d="M11 15 Q4 15 7 22" fill="none" stroke="#C8942A" stroke-width="1.2"/></svg>
+        </div>
+        <div class="corner-ornament co-br">
+          <svg viewBox="0 0 44 44" width="34" height="34" style="transform:scale(-1)"><path d="M2 42 L2 14 Q2 2 14 2 L42 2" fill="none" stroke="#C8942A" stroke-width="2.2" stroke-linecap="round"/><path d="M7 42 L7 16 Q7 7 16 7 L42 7" fill="none" stroke="#E5B85C" stroke-width="1.2" stroke-linecap="round"/><circle cx="15" cy="15" r="3.5" fill="#C8942A"/><circle cx="15" cy="15" r="1.5" fill="#FFF2B8"/><circle cx="26" cy="11" r="2" fill="#C8942A"/><circle cx="11" cy="26" r="2" fill="#C8942A"/><path d="M15 11 Q15 4 22 7" fill="none" stroke="#C8942A" stroke-width="1.2"/><path d="M11 15 Q4 15 7 22" fill="none" stroke="#C8942A" stroke-width="1.2"/></svg>
+        </div>
+      </div>
+
+      <!-- ── Couple Photo with Ornate Frame ── -->
+      <div class="couple-photo-section">
+        <div class="couple-frame-outer">
+          <div class="couple-frame-corner cfc-tl"></div>
+          <div class="couple-frame-corner cfc-tr"></div>
+          <div class="couple-frame-corner cfc-bl"></div>
+          <div class="couple-frame-corner cfc-br"></div>
+          <div class="couple-frame-inner">
+            <img src="WhatsApp Image 2026-10-29 at 10.50.28 AM.jpeg"
+                 alt="Ashokkumar &amp; Pradeepa"
+                 class="couple-photo"/>
+            <div class="couple-photo-glow"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero Text -->
+      <div class="hero-text-block">
+        <p class="hero-god-invocation">🕉️ ஸ்ரீ விநாயகர் துணை 🕉️</p>
+        <p class="hero-blessing">✦ வாழ்க வளமுடன் ✦</p>
+        <p class="hero-sub">With the blessings of God &amp; our families, we joyfully invite you</p>
+        <!-- Traditional South Indian Maroon Capsule Badge (Matching User's Reference) -->
+        <div class="couple-pill-badge">
+          <div class="pill-name-block">
+            <span class="name-role">GROOM</span>
+            <h1 class="name-script-hero">R. Ashokkumar</h1>
+          </div>
+          <div class="pill-heart-block">
+            <span class="material-symbols-outlined heart-icon">favorite</span>
+          </div>
+          <div class="pill-name-block">
+            <span class="name-role">BRIDE</span>
+            <h1 class="name-script-hero">S. Pradeepa</h1>
+          </div>
+        </div>
+
+        <!-- Parents' Blessings Row -->
+        <div class="couple-parents-row">
+          <p class="name-parents">S/o Mr. K. Ramu &amp; Mrs. R. Lakshmi</p>
+          <span class="parents-sep">✦</span>
+          <p class="name-parents">D/o Mr. D. Swaminathan &amp; Mrs. M. Vasuki</p>
+        </div>
+        <div class="date-badge-hero">
+          <div class="date-badge-inner">
+            <span class="db-month">NOVEMBER</span>
+            <span class="db-day">13</span>
+            <span class="db-dow">FRIDAY</span>
+          </div>
+          <span class="db-year">2026</span>
+        </div>
+      </div>
+    </div><!-- end .hero-glass-card -->
+
+    <a href="#countdown" class="scroll-hint-hero">
+      <span class="material-symbols-outlined">keyboard_arrow_down</span>
+    </a>
+  </section>
+
+  <!-- ✦ Kanchipuram Zari Divider ✦ -->
+  <div class="zari-divider"></div>
+
+  <!-- ─── COUNTDOWN ─── -->
+  <section id="countdown" class="section countdown-section">
+    <div class="sec-inner">
+      <div class="sec-head">
+        <span class="sec-tamil-tag">✦ மங்கல நாள் கணிப்பு ✦</span>
+        <div class="deco-row">
+          <span class="material-symbols-outlined deco-icon">local_florist</span>
+          <span class="material-symbols-outlined deco-icon">spa</span>
+          <div class="deco-line"></div>
+          <span class="material-symbols-outlined deco-icon">diamond</span>
+          <div class="deco-line"></div>
+          <span class="material-symbols-outlined deco-icon">spa</span>
+          <span class="material-symbols-outlined deco-icon">local_florist</span>
+        </div>
+        <h2 class="sec-title">Counting Down</h2>
+        <p class="sec-sub">to our forever begins</p>
+      </div>
+      <div class="lotus-center">
+        <span class="material-symbols-outlined lotus-icon">spa</span>
+      </div>
+      <div class="countdown-grid">
+        <div class="count-box"><div class="count-num" id="days">00</div><div class="count-lbl">Days</div></div>
+        <div class="count-sep">:</div>
+        <div class="count-box"><div class="count-num" id="hours">00</div><div class="count-lbl">Hours</div></div>
+        <div class="count-sep">:</div>
+        <div class="count-box"><div class="count-num" id="minutes">00</div><div class="count-lbl">Minutes</div></div>
+        <div class="count-sep">:</div>
+        <div class="count-box"><div class="count-num" id="seconds">00</div><div class="count-lbl">Seconds</div></div>
+      </div>
+      <p class="count-date-text">
+        <span class="material-symbols-outlined inline-icon">calendar_month</span>
+        November 13, 2026 &nbsp;·&nbsp; Friday &nbsp;·&nbsp; 09:30 AM
+      </p>
+    </div>
+  </section>
+
+  <!-- ✦ Kanchipuram Zari Divider ✦ -->
+  <div class="zari-divider"></div>
+
+  <!-- ─── TAMIL VERSE ─── -->
+  <section class="section verse-section">
+    <div class="sec-inner">
+      <div class="sec-head">
+        <span class="sec-tamil-tag">✦ மங்கல வாழ்த்துப் பாடல் ✦</span>
+      </div>
+      <div class="verse-card fade-in-up">
+        <div class="card-corners">
+          <div class="corner-ornament co-tl"><svg viewBox="0 0 44 44" width="34" height="34"><path d="M2 42 L2 14 Q2 2 14 2 L42 2" fill="none" stroke="#C8942A" stroke-width="2.2" stroke-linecap="round"/><path d="M7 42 L7 16 Q7 7 16 7 L42 7" fill="none" stroke="#E5B85C" stroke-width="1.2" stroke-linecap="round"/><circle cx="15" cy="15" r="3.5" fill="#C8942A"/><circle cx="15" cy="15" r="1.5" fill="#FFF2B8"/><circle cx="26" cy="11" r="2" fill="#C8942A"/><circle cx="11" cy="26" r="2" fill="#C8942A"/><path d="M15 11 Q15 4 22 7" fill="none" stroke="#C8942A" stroke-width="1.2"/><path d="M11 15 Q4 15 7 22" fill="none" stroke="#C8942A" stroke-width="1.2"/></svg></div>
+          <div class="corner-ornament co-tr"><svg viewBox="0 0 44 44" width="34" height="34" style="transform:scaleX(-1)"><path d="M2 42 L2 14 Q2 2 14 2 L42 2" fill="none" stroke="#C8942A" stroke-width="2.2" stroke-linecap="round"/><path d="M7 42 L7 16 Q7 7 16 7 L42 7" fill="none" stroke="#E5B85C" stroke-width="1.2" stroke-linecap="round"/><circle cx="15" cy="15" r="3.5" fill="#C8942A"/><circle cx="15" cy="15" r="1.5" fill="#FFF2B8"/><circle cx="26" cy="11" r="2" fill="#C8942A"/><circle cx="11" cy="26" r="2" fill="#C8942A"/><path d="M15 11 Q15 4 22 7" fill="none" stroke="#C8942A" stroke-width="1.2"/><path d="M11 15 Q4 15 7 22" fill="none" stroke="#C8942A" stroke-width="1.2"/></svg></div>
+          <div class="corner-ornament co-bl"><svg viewBox="0 0 44 44" width="34" height="34" style="transform:scaleY(-1)"><path d="M2 42 L2 14 Q2 2 14 2 L42 2" fill="none" stroke="#C8942A" stroke-width="2.2" stroke-linecap="round"/><path d="M7 42 L7 16 Q7 7 16 7 L42 7" fill="none" stroke="#E5B85C" stroke-width="1.2" stroke-linecap="round"/><circle cx="15" cy="15" r="3.5" fill="#C8942A"/><circle cx="15" cy="15" r="1.5" fill="#FFF2B8"/><circle cx="26" cy="11" r="2" fill="#C8942A"/><circle cx="11" cy="26" r="2" fill="#C8942A"/><path d="M15 11 Q15 4 22 7" fill="none" stroke="#C8942A" stroke-width="1.2"/><path d="M11 15 Q4 15 7 22" fill="none" stroke="#C8942A" stroke-width="1.2"/></svg></div>
+          <div class="corner-ornament co-br"><svg viewBox="0 0 44 44" width="34" height="34" style="transform:scale(-1)"><path d="M2 42 L2 14 Q2 2 14 2 L42 2" fill="none" stroke="#C8942A" stroke-width="2.2" stroke-linecap="round"/><path d="M7 42 L7 16 Q7 7 16 7 L42 7" fill="none" stroke="#E5B85C" stroke-width="1.2" stroke-linecap="round"/><circle cx="15" cy="15" r="3.5" fill="#C8942A"/><circle cx="15" cy="15" r="1.5" fill="#FFF2B8"/><circle cx="26" cy="11" r="2" fill="#C8942A"/><circle cx="11" cy="26" r="2" fill="#C8942A"/><path d="M15 11 Q15 4 22 7" fill="none" stroke="#C8942A" stroke-width="1.2"/><path d="M11 15 Q4 15 7 22" fill="none" stroke="#C8942A" stroke-width="1.2"/></svg></div>
+        </div>
+        <div class="verse-corner tl"></div>
+        <div class="verse-corner tr"></div>
+        <div class="verse-corner bl"></div>
+        <div class="verse-corner br"></div>
+        <span class="material-symbols-outlined verse-icon">auto_stories</span>
+        <p class="verse-tamil">வானும் மண்ணும் வாழ்த்த</p>
+        <p class="verse-body">மன் மனத்தில் வேரூன்றிய மரம் போல, வானம் போல உயரம் சேர,<br/>
+        இயற்கை முழுவதும் சாட்சி நின்று, இரு உயிர்கள் இணையும் இந்நாளில்,<br/>
+        இவர்களது வாழ்க்கையின் ஒவ்வொரு ஓசையிலும், அன்பின் நாதம் நெஞ்சில் ஒலிக்கட்டும்</p>
+      </div>
+      <p class="english-verse fade-in-up">"We are thrilled to embark on this journey and request your blessings and presence on this special occasion"</p>
+    </div>
+  </section>
+
+  <!-- ✦ Kanchipuram Zari Divider ✦ -->
+  <div class="zari-divider"></div>
+
+  <!-- ─── SCRATCH TO REVEAL ─── -->
+  <section class="section scratch-section">
+    <div class="sec-inner">
+      <div class="sec-head">
+        <span class="sec-tamil-tag">✦ அன்பான ஆசி ✦</span>
+        <div class="deco-row">
+          <span class="material-symbols-outlined deco-icon" style="color:#e63946">local_florist</span>
+          <span class="material-symbols-outlined deco-icon">gesture</span>
+          <div class="deco-line"></div>
+          <span class="material-symbols-outlined deco-icon">gesture</span>
+          <span class="material-symbols-outlined deco-icon" style="color:#e63946">local_florist</span>
+        </div>
+        <h2 class="sec-title">A Special Surprise</h2>
+        <p class="sec-sub">Scratch to reveal our blessing for you</p>
+      </div>
+      <div class="scratch-wrapper fade-in-up">
+        <div class="card-corners">
+          <div class="corner-ornament co-tl"><svg viewBox="0 0 44 44" width="34" height="34"><path d="M2 42 L2 14 Q2 2 14 2 L42 2" fill="none" stroke="#C8942A" stroke-width="2.2" stroke-linecap="round"/><path d="M7 42 L7 16 Q7 7 16 7 L42 7" fill="none" stroke="#E5B85C" stroke-width="1.2" stroke-linecap="round"/><circle cx="15" cy="15" r="3.5" fill="#C8942A"/><circle cx="15" cy="15" r="1.5" fill="#FFF2B8"/><circle cx="26" cy="11" r="2" fill="#C8942A"/><circle cx="11" cy="26" r="2" fill="#C8942A"/><path d="M15 11 Q15 4 22 7" fill="none" stroke="#C8942A" stroke-width="1.2"/><path d="M11 15 Q4 15 7 22" fill="none" stroke="#C8942A" stroke-width="1.2"/></svg></div>
+          <div class="corner-ornament co-tr"><svg viewBox="0 0 44 44" width="34" height="34" style="transform:scaleX(-1)"><path d="M2 42 L2 14 Q2 2 14 2 L42 2" fill="none" stroke="#C8942A" stroke-width="2.2" stroke-linecap="round"/><path d="M7 42 L7 16 Q7 7 16 7 L42 7" fill="none" stroke="#E5B85C" stroke-width="1.2" stroke-linecap="round"/><circle cx="15" cy="15" r="3.5" fill="#C8942A"/><circle cx="15" cy="15" r="1.5" fill="#FFF2B8"/><circle cx="26" cy="11" r="2" fill="#C8942A"/><circle cx="11" cy="26" r="2" fill="#C8942A"/><path d="M15 11 Q15 4 22 7" fill="none" stroke="#C8942A" stroke-width="1.2"/><path d="M11 15 Q4 15 7 22" fill="none" stroke="#C8942A" stroke-width="1.2"/></svg></div>
+          <div class="corner-ornament co-bl"><svg viewBox="0 0 44 44" width="34" height="34" style="transform:scaleY(-1)"><path d="M2 42 L2 14 Q2 2 14 2 L42 2" fill="none" stroke="#C8942A" stroke-width="2.2" stroke-linecap="round"/><path d="M7 42 L7 16 Q7 7 16 7 L42 7" fill="none" stroke="#E5B85C" stroke-width="1.2" stroke-linecap="round"/><circle cx="15" cy="15" r="3.5" fill="#C8942A"/><circle cx="15" cy="15" r="1.5" fill="#FFF2B8"/><circle cx="26" cy="11" r="2" fill="#C8942A"/><circle cx="11" cy="26" r="2" fill="#C8942A"/><path d="M15 11 Q15 4 22 7" fill="none" stroke="#C8942A" stroke-width="1.2"/><path d="M11 15 Q4 15 7 22" fill="none" stroke="#C8942A" stroke-width="1.2"/></svg></div>
+          <div class="corner-ornament co-br"><svg viewBox="0 0 44 44" width="34" height="34" style="transform:scale(-1)"><path d="M2 42 L2 14 Q2 2 14 2 L42 2" fill="none" stroke="#C8942A" stroke-width="2.2" stroke-linecap="round"/><path d="M7 42 L7 16 Q7 7 16 7 L42 7" fill="none" stroke="#E5B85C" stroke-width="1.2" stroke-linecap="round"/><circle cx="15" cy="15" r="3.5" fill="#C8942A"/><circle cx="15" cy="15" r="1.5" fill="#FFF2B8"/><circle cx="26" cy="11" r="2" fill="#C8942A"/><circle cx="11" cy="26" r="2" fill="#C8942A"/><path d="M15 11 Q15 4 22 7" fill="none" stroke="#C8942A" stroke-width="1.2"/><path d="M11 15 Q4 15 7 22" fill="none" stroke="#C8942A" stroke-width="1.2"/></svg></div>
+        </div>
+        <canvas id="scratch-canvas" width="340" height="210"></canvas>
+        <div id="scratch-reveal" class="scratch-reveal">
+          <span class="material-symbols-outlined scratch-reveal-icon">favorite</span>
+          <p>Your presence is our greatest gift!</p>
+          <p class="scratch-sub">May joy, love &amp; blessings fill this day for everyone.</p>
+        </div>
+        <p class="scratch-hint" id="scratch-hint">
+          <span class="material-symbols-outlined" style="font-size:1rem;vertical-align:middle">touch_app</span>
+          Scratch here to reveal
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ✦ Kanchipuram Zari Divider ✦ -->
+  <div class="zari-divider"></div>
+
+  <!-- ─── EVENT DETAILS ─── -->
+  <section id="event" class="section event-section">
+    <div class="sec-inner">
+      <div class="sec-head">
+        <span class="sec-tamil-tag">✦ திருமண சுப நிகழ்வுகள் ✦</span>
+        <div class="deco-row">
+          <span class="material-symbols-outlined deco-icon" style="color:#e63946">local_florist</span>
+          <span class="material-symbols-outlined deco-icon">spa</span>
+          <div class="deco-line"></div>
+          <span class="material-symbols-outlined deco-icon">celebration</span>
+          <div class="deco-line"></div>
+          <span class="material-symbols-outlined deco-icon">spa</span>
+          <span class="material-symbols-outlined deco-icon" style="color:#e63946">local_florist</span>
+        </div>
+        <h2 class="sec-title">The Celebrations</h2>
+        <p class="sec-sub">Join us on our special day</p>
+      </div>
+      <div class="events-grid">
+        <div class="event-card fade-in-up">
+          <div class="card-corners">
+            <div class="corner-ornament co-tl"><svg viewBox="0 0 44 44" width="34" height="34"><path d="M2 42 L2 14 Q2 2 14 2 L42 2" fill="none" stroke="#C8942A" stroke-width="2.2" stroke-linecap="round"/><path d="M7 42 L7 16 Q7 7 16 7 L42 7" fill="none" stroke="#E5B85C" stroke-width="1.2" stroke-linecap="round"/><circle cx="15" cy="15" r="3.5" fill="#C8942A"/><circle cx="15" cy="15" r="1.5" fill="#FFF2B8"/><circle cx="26" cy="11" r="2" fill="#C8942A"/><circle cx="11" cy="26" r="2" fill="#C8942A"/><path d="M15 11 Q15 4 22 7" fill="none" stroke="#C8942A" stroke-width="1.2"/><path d="M11 15 Q4 15 7 22" fill="none" stroke="#C8942A" stroke-width="1.2"/></svg></div>
+            <div class="corner-ornament co-tr"><svg viewBox="0 0 44 44" width="34" height="34" style="transform:scaleX(-1)"><path d="M2 42 L2 14 Q2 2 14 2 L42 2" fill="none" stroke="#C8942A" stroke-width="2.2" stroke-linecap="round"/><path d="M7 42 L7 16 Q7 7 16 7 L42 7" fill="none" stroke="#E5B85C" stroke-width="1.2" stroke-linecap="round"/><circle cx="15" cy="15" r="3.5" fill="#C8942A"/><circle cx="15" cy="15" r="1.5" fill="#FFF2B8"/><circle cx="26" cy="11" r="2" fill="#C8942A"/><circle cx="11" cy="26" r="2" fill="#C8942A"/><path d="M15 11 Q15 4 22 7" fill="none" stroke="#C8942A" stroke-width="1.2"/><path d="M11 15 Q4 15 7 22" fill="none" stroke="#C8942A" stroke-width="1.2"/></svg></div>
+            <div class="corner-ornament co-bl"><svg viewBox="0 0 44 44" width="34" height="34" style="transform:scaleY(-1)"><path d="M2 42 L2 14 Q2 2 14 2 L42 2" fill="none" stroke="#C8942A" stroke-width="2.2" stroke-linecap="round"/><path d="M7 42 L7 16 Q7 7 16 7 L42 7" fill="none" stroke="#E5B85C" stroke-width="1.2" stroke-linecap="round"/><circle cx="15" cy="15" r="3.5" fill="#C8942A"/><circle cx="15" cy="15" r="1.5" fill="#FFF2B8"/><circle cx="26" cy="11" r="2" fill="#C8942A"/><circle cx="11" cy="26" r="2" fill="#C8942A"/><path d="M15 11 Q15 4 22 7" fill="none" stroke="#C8942A" stroke-width="1.2"/><path d="M11 15 Q4 15 7 22" fill="none" stroke="#C8942A" stroke-width="1.2"/></svg></div>
+            <div class="corner-ornament co-br"><svg viewBox="0 0 44 44" width="34" height="34" style="transform:scale(-1)"><path d="M2 42 L2 14 Q2 2 14 2 L42 2" fill="none" stroke="#C8942A" stroke-width="2.2" stroke-linecap="round"/><path d="M7 42 L7 16 Q7 7 16 7 L42 7" fill="none" stroke="#E5B85C" stroke-width="1.2" stroke-linecap="round"/><circle cx="15" cy="15" r="3.5" fill="#C8942A"/><circle cx="15" cy="15" r="1.5" fill="#FFF2B8"/><circle cx="26" cy="11" r="2" fill="#C8942A"/><circle cx="11" cy="26" r="2" fill="#C8942A"/><path d="M15 11 Q15 4 22 7" fill="none" stroke="#C8942A" stroke-width="1.2"/><path d="M11 15 Q4 15 7 22" fill="none" stroke="#C8942A" stroke-width="1.2"/></svg></div>
+          </div>
+          <div class="event-card-top">
+            <span class="material-symbols-outlined event-ms-icon">brightness_high</span>
+            <h3 class="event-name">Muhurtham</h3>
+          </div>
+          <div class="event-details-list">
+            <div class="ev-row"><span class="material-symbols-outlined ev-icon">calendar_month</span><span>Friday, November 13, 2026</span></div>
+            <div class="ev-row"><span class="material-symbols-outlined ev-icon">schedule</span><span>09:30 AM – 10:30 AM</span></div>
+            <div class="ev-row"><span class="material-symbols-outlined ev-icon">location_on</span><span>GS Mahal, D Block Stop<br/>Ramanathapuram – 623504</span></div>
+          </div>
+          <div class="cal-actions">
+            <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Ashokkumar+%26+Pradeepa+-+Wedding+Muhurtham&dates=20261113T040000Z%2F20261113T050000Z&details=Wedding+ceremony+of+R.+Ashokkumar+and+S.+Pradeepa.+We+joyfully+invite+you+to+bless+us!&location=GS+Mahal%2C+D+Block+Stop%2C+Ramanathapuram+-+623504" target="_blank" rel="noopener" class="cal-btn gcal-btn">
+              <span class="material-symbols-outlined">event</span>
+              <span>Add to Google Calendar</span>
+            </a>
+          </div>
+        </div>
+        <div class="event-card fade-in-up">
+          <div class="card-corners">
+            <div class="corner-ornament co-tl"><svg viewBox="0 0 44 44" width="34" height="34"><path d="M2 42 L2 14 Q2 2 14 2 L42 2" fill="none" stroke="#C8942A" stroke-width="2.2" stroke-linecap="round"/><path d="M7 42 L7 16 Q7 7 16 7 L42 7" fill="none" stroke="#E5B85C" stroke-width="1.2" stroke-linecap="round"/><circle cx="15" cy="15" r="3.5" fill="#C8942A"/><circle cx="15" cy="15" r="1.5" fill="#FFF2B8"/><circle cx="26" cy="11" r="2" fill="#C8942A"/><circle cx="11" cy="26" r="2" fill="#C8942A"/><path d="M15 11 Q15 4 22 7" fill="none" stroke="#C8942A" stroke-width="1.2"/><path d="M11 15 Q4 15 7 22" fill="none" stroke="#C8942A" stroke-width="1.2"/></svg></div>
+            <div class="corner-ornament co-tr"><svg viewBox="0 0 44 44" width="34" height="34" style="transform:scaleX(-1)"><path d="M2 42 L2 14 Q2 2 14 2 L42 2" fill="none" stroke="#C8942A" stroke-width="2.2" stroke-linecap="round"/><path d="M7 42 L7 16 Q7 7 16 7 L42 7" fill="none" stroke="#E5B85C" stroke-width="1.2" stroke-linecap="round"/><circle cx="15" cy="15" r="3.5" fill="#C8942A"/><circle cx="15" cy="15" r="1.5" fill="#FFF2B8"/><circle cx="26" cy="11" r="2" fill="#C8942A"/><circle cx="11" cy="26" r="2" fill="#C8942A"/><path d="M15 11 Q15 4 22 7" fill="none" stroke="#C8942A" stroke-width="1.2"/><path d="M11 15 Q4 15 7 22" fill="none" stroke="#C8942A" stroke-width="1.2"/></svg></div>
+            <div class="corner-ornament co-bl"><svg viewBox="0 0 44 44" width="34" height="34" style="transform:scaleY(-1)"><path d="M2 42 L2 14 Q2 2 14 2 L42 2" fill="none" stroke="#C8942A" stroke-width="2.2" stroke-linecap="round"/><path d="M7 42 L7 16 Q7 7 16 7 L42 7" fill="none" stroke="#E5B85C" stroke-width="1.2" stroke-linecap="round"/><circle cx="15" cy="15" r="3.5" fill="#C8942A"/><circle cx="15" cy="15" r="1.5" fill="#FFF2B8"/><circle cx="26" cy="11" r="2" fill="#C8942A"/><circle cx="11" cy="26" r="2" fill="#C8942A"/><path d="M15 11 Q15 4 22 7" fill="none" stroke="#C8942A" stroke-width="1.2"/><path d="M11 15 Q4 15 7 22" fill="none" stroke="#C8942A" stroke-width="1.2"/></svg></div>
+            <div class="corner-ornament co-br"><svg viewBox="0 0 44 44" width="34" height="34" style="transform:scale(-1)"><path d="M2 42 L2 14 Q2 2 14 2 L42 2" fill="none" stroke="#C8942A" stroke-width="2.2" stroke-linecap="round"/><path d="M7 42 L7 16 Q7 7 16 7 L42 7" fill="none" stroke="#E5B85C" stroke-width="1.2" stroke-linecap="round"/><circle cx="15" cy="15" r="3.5" fill="#C8942A"/><circle cx="15" cy="15" r="1.5" fill="#FFF2B8"/><circle cx="26" cy="11" r="2" fill="#C8942A"/><circle cx="11" cy="26" r="2" fill="#C8942A"/><path d="M15 11 Q15 4 22 7" fill="none" stroke="#C8942A" stroke-width="1.2"/><path d="M11 15 Q4 15 7 22" fill="none" stroke="#C8942A" stroke-width="1.2"/></svg></div>
+          </div>
+          <div class="event-card-top reception-top">
+            <span class="material-symbols-outlined event-ms-icon">celebration</span>
+            <h3 class="event-name">Reception</h3>
+          </div>
+          <div class="event-details-list">
+            <div class="ev-row"><span class="material-symbols-outlined ev-icon">calendar_month</span><span>Sunday, November 15, 2026</span></div>
+            <div class="ev-row"><span class="material-symbols-outlined ev-icon">schedule</span><span>10:45 AM onwards</span></div>
+            <div class="ev-row"><span class="material-symbols-outlined ev-icon">location_on</span><span>Ambros Mahal, RC Street<br/>Rajagambeeram, Manamadurai</span></div>
+          </div>
+          <div class="cal-actions">
+            <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Ashokkumar+%26+Pradeepa+-+Wedding+Reception&dates=20261115T051500Z%2F20261115T083000Z&details=Wedding+Reception+celebration+of+R.+Ashokkumar+and+S.+Pradeepa.&location=Ambros+Mahal%2C+RC+Street%2C+Rajagambeeram%2C+Manamadurai" target="_blank" rel="noopener" class="cal-btn gcal-btn">
+              <span class="material-symbols-outlined">event</span>
+              <span>Add to Google Calendar</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ✦ Kanchipuram Zari Divider ✦ -->
+  <div class="zari-divider"></div>
+
+  <!-- ─── VENUE ─── -->
+  <section id="venue" class="section venue-section">
+    <div class="sec-inner">
+      <div class="sec-head">
+        <span class="sec-tamil-tag">✦ திருமண மண்டபம் ✦</span>
+        <div class="deco-row">
+          <span class="material-symbols-outlined deco-icon" style="color:#e63946">local_florist</span>
+          <span class="material-symbols-outlined deco-icon">spa</span>
+          <div class="deco-line"></div>
+          <span class="material-symbols-outlined deco-icon">map</span>
+          <div class="deco-line"></div>
+          <span class="material-symbols-outlined deco-icon">spa</span>
+          <span class="material-symbols-outlined deco-icon" style="color:#e63946">local_florist</span>
+        </div>
+        <h2 class="sec-title">Venue</h2>
+        <p class="sec-sub">We look forward to seeing you here</p>
+      </div>
+      <div class="venues-row">
+        <div class="venue-card fade-in-up">
+          <div class="card-corners">
+            <div class="corner-ornament co-tl"><svg viewBox="0 0 44 44" width="34" height="34"><path d="M2 42 L2 14 Q2 2 14 2 L42 2" fill="none" stroke="#C8942A" stroke-width="2.2" stroke-linecap="round"/><path d="M7 42 L7 16 Q7 7 16 7 L42 7" fill="none" stroke="#E5B85C" stroke-width="1.2" stroke-linecap="round"/><circle cx="15" cy="15" r="3.5" fill="#C8942A"/><circle cx="15" cy="15" r="1.5" fill="#FFF2B8"/><circle cx="26" cy="11" r="2" fill="#C8942A"/><circle cx="11" cy="26" r="2" fill="#C8942A"/><path d="M15 11 Q15 4 22 7" fill="none" stroke="#C8942A" stroke-width="1.2"/><path d="M11 15 Q4 15 7 22" fill="none" stroke="#C8942A" stroke-width="1.2"/></svg></div>
+            <div class="corner-ornament co-tr"><svg viewBox="0 0 44 44" width="34" height="34" style="transform:scaleX(-1)"><path d="M2 42 L2 14 Q2 2 14 2 L42 2" fill="none" stroke="#C8942A" stroke-width="2.2" stroke-linecap="round"/><path d="M7 42 L7 16 Q7 7 16 7 L42 7" fill="none" stroke="#E5B85C" stroke-width="1.2" stroke-linecap="round"/><circle cx="15" cy="15" r="3.5" fill="#C8942A"/><circle cx="15" cy="15" r="1.5" fill="#FFF2B8"/><circle cx="26" cy="11" r="2" fill="#C8942A"/><circle cx="11" cy="26" r="2" fill="#C8942A"/><path d="M15 11 Q15 4 22 7" fill="none" stroke="#C8942A" stroke-width="1.2"/><path d="M11 15 Q4 15 7 22" fill="none" stroke="#C8942A" stroke-width="1.2"/></svg></div>
+            <div class="corner-ornament co-bl"><svg viewBox="0 0 44 44" width="34" height="34" style="transform:scaleY(-1)"><path d="M2 42 L2 14 Q2 2 14 2 L42 2" fill="none" stroke="#C8942A" stroke-width="2.2" stroke-linecap="round"/><path d="M7 42 L7 16 Q7 7 16 7 L42 7" fill="none" stroke="#E5B85C" stroke-width="1.2" stroke-linecap="round"/><circle cx="15" cy="15" r="3.5" fill="#C8942A"/><circle cx="15" cy="15" r="1.5" fill="#FFF2B8"/><circle cx="26" cy="11" r="2" fill="#C8942A"/><circle cx="11" cy="26" r="2" fill="#C8942A"/><path d="M15 11 Q15 4 22 7" fill="none" stroke="#C8942A" stroke-width="1.2"/><path d="M11 15 Q4 15 7 22" fill="none" stroke="#C8942A" stroke-width="1.2"/></svg></div>
+            <div class="corner-ornament co-br"><svg viewBox="0 0 44 44" width="34" height="34" style="transform:scale(-1)"><path d="M2 42 L2 14 Q2 2 14 2 L42 2" fill="none" stroke="#C8942A" stroke-width="2.2" stroke-linecap="round"/><path d="M7 42 L7 16 Q7 7 16 7 L42 7" fill="none" stroke="#E5B85C" stroke-width="1.2" stroke-linecap="round"/><circle cx="15" cy="15" r="3.5" fill="#C8942A"/><circle cx="15" cy="15" r="1.5" fill="#FFF2B8"/><circle cx="26" cy="11" r="2" fill="#C8942A"/><circle cx="11" cy="26" r="2" fill="#C8942A"/><path d="M15 11 Q15 4 22 7" fill="none" stroke="#C8942A" stroke-width="1.2"/><path d="M11 15 Q4 15 7 22" fill="none" stroke="#C8942A" stroke-width="1.2"/></svg></div>
+          </div>
+          <span class="material-symbols-outlined venue-big-icon">domain</span>
+          <h3 class="venue-name">GS Mahal</h3>
+          <p class="venue-tag">✦ Muhurtham Venue ✦</p>
+          <p class="venue-addr">D Block Stop, Ramanathapuram – 623504<br/>Tamil Nadu, India</p>
+          <div class="map-pulse-wrap">
+            <div class="map-pulse-rings">
+              <div class="ring r1"></div>
+              <div class="ring r2"></div>
+              <div class="ring r3"></div>
+            </div>
+            <span class="material-symbols-outlined map-pin-icon">location_on</span>
+          </div>
+          <p class="map-lbl">GS Mahal · Ramanathapuram</p>
+          <a href="https://www.google.com/maps/search/GS+Mahal+D+Block+Stop+Ramanathapuram+623504"
+             target="_blank" rel="noopener" class="dir-btn">
+            <span class="material-symbols-outlined">directions</span>
+            <span>Get Directions</span>
+          </a>
+        </div>
+
+        <!-- Second venue: Ambros Mahal -->
+        <div class="venue-card venue-card-2 fade-in-up">
+          <div class="card-corners">
+            <div class="corner-ornament co-tl"><svg viewBox="0 0 44 44" width="34" height="34"><path d="M2 42 L2 14 Q2 2 14 2 L42 2" fill="none" stroke="#C8942A" stroke-width="2.2" stroke-linecap="round"/><path d="M7 42 L7 16 Q7 7 16 7 L42 7" fill="none" stroke="#E5B85C" stroke-width="1.2" stroke-linecap="round"/><circle cx="15" cy="15" r="3.5" fill="#C8942A"/><circle cx="15" cy="15" r="1.5" fill="#FFF2B8"/><circle cx="26" cy="11" r="2" fill="#C8942A"/><circle cx="11" cy="26" r="2" fill="#C8942A"/><path d="M15 11 Q15 4 22 7" fill="none" stroke="#C8942A" stroke-width="1.2"/><path d="M11 15 Q4 15 7 22" fill="none" stroke="#C8942A" stroke-width="1.2"/></svg></div>
+            <div class="corner-ornament co-tr"><svg viewBox="0 0 44 44" width="34" height="34" style="transform:scaleX(-1)"><path d="M2 42 L2 14 Q2 2 14 2 L42 2" fill="none" stroke="#C8942A" stroke-width="2.2" stroke-linecap="round"/><path d="M7 42 L7 16 Q7 7 16 7 L42 7" fill="none" stroke="#E5B85C" stroke-width="1.2" stroke-linecap="round"/><circle cx="15" cy="15" r="3.5" fill="#C8942A"/><circle cx="15" cy="15" r="1.5" fill="#FFF2B8"/><circle cx="26" cy="11" r="2" fill="#C8942A"/><circle cx="11" cy="26" r="2" fill="#C8942A"/><path d="M15 11 Q15 4 22 7" fill="none" stroke="#C8942A" stroke-width="1.2"/><path d="M11 15 Q4 15 7 22" fill="none" stroke="#C8942A" stroke-width="1.2"/></svg></div>
+            <div class="corner-ornament co-bl"><svg viewBox="0 0 44 44" width="34" height="34" style="transform:scaleY(-1)"><path d="M2 42 L2 14 Q2 2 14 2 L42 2" fill="none" stroke="#C8942A" stroke-width="2.2" stroke-linecap="round"/><path d="M7 42 L7 16 Q7 7 16 7 L42 7" fill="none" stroke="#E5B85C" stroke-width="1.2" stroke-linecap="round"/><circle cx="15" cy="15" r="3.5" fill="#C8942A"/><circle cx="15" cy="15" r="1.5" fill="#FFF2B8"/><circle cx="26" cy="11" r="2" fill="#C8942A"/><circle cx="11" cy="26" r="2" fill="#C8942A"/><path d="M15 11 Q15 4 22 7" fill="none" stroke="#C8942A" stroke-width="1.2"/><path d="M11 15 Q4 15 7 22" fill="none" stroke="#C8942A" stroke-width="1.2"/></svg></div>
+            <div class="corner-ornament co-br"><svg viewBox="0 0 44 44" width="34" height="34" style="transform:scale(-1)"><path d="M2 42 L2 14 Q2 2 14 2 L42 2" fill="none" stroke="#C8942A" stroke-width="2.2" stroke-linecap="round"/><path d="M7 42 L7 16 Q7 7 16 7 L42 7" fill="none" stroke="#E5B85C" stroke-width="1.2" stroke-linecap="round"/><circle cx="15" cy="15" r="3.5" fill="#C8942A"/><circle cx="15" cy="15" r="1.5" fill="#FFF2B8"/><circle cx="26" cy="11" r="2" fill="#C8942A"/><circle cx="11" cy="26" r="2" fill="#C8942A"/><path d="M15 11 Q15 4 22 7" fill="none" stroke="#C8942A" stroke-width="1.2"/><path d="M11 15 Q4 15 7 22" fill="none" stroke="#C8942A" stroke-width="1.2"/></svg></div>
+          </div>
+          <span class="material-symbols-outlined venue-big-icon">celebration</span>
+          <h3 class="venue-name">Ambros Mahal</h3>
+          <p class="venue-tag">✦ Reception Venue ✦</p>
+          <p class="venue-addr">RC Street, Rajagambeeram<br/>Manamadurai, Tamil Nadu</p>
+          <div class="map-pulse-wrap">
+            <div class="map-pulse-rings">
+              <div class="ring r1"></div>
+              <div class="ring r2"></div>
+              <div class="ring r3"></div>
+            </div>
+            <span class="material-symbols-outlined map-pin-icon">location_on</span>
+          </div>
+          <p class="map-lbl">Ambros Mahal · Manamadurai</p>
+          <a href="https://www.google.com/maps/search/Ambros+Mahal+RC+Street+Rajagambeeram+Manamadurai"
+             target="_blank" rel="noopener" class="dir-btn">
+            <span class="material-symbols-outlined">directions</span>
+            <span>Get Directions</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ✦ Kanchipuram Zari Divider ✦ -->
+  <div class="zari-divider"></div>
+
+  <!-- ─── PLACES TO EXPLORE (Swipeable Cards) ─── -->
+  <section class="section places-section">
+    <div class="sec-inner">
+      <div class="sec-head">
+        <span class="sec-tamil-tag">✦ புண்ணிய &amp; சுற்றுலாத் தலங்கள் ✦</span>
+        <div class="deco-row">
+          <span class="material-symbols-outlined deco-icon">explore</span>
+          <div class="deco-line"></div>
+          <span class="material-symbols-outlined deco-icon">explore</span>
+        </div>
+        <h2 class="sec-title">Places to Explore</h2>
+        <p class="sec-sub">Beautiful destinations near Ramanathapuram while you visit</p>
+      </div>
+      <div class="places-carousel-wrap">
+        <button class="carousel-btn prev" id="places-prev" onclick="shiftPlace(-1)">
+          <span class="material-symbols-outlined">chevron_left</span>
+        </button>
+        <div class="places-track-outer">
+          <div class="places-track" id="places-track">
+            <div class="place-slide">
+              <div class="place-img-wrap"><img src="rameswaram.png" alt="Rameswaram Temple" loading="lazy"/><div class="place-overlay"></div></div>
+              <div class="place-info">
+                <span class="material-symbols-outlined place-icon">temple_hindu</span>
+                <h4>Rameswaram Temple</h4>
+                <p>One of the 12 Jyotirlinga shrines. Walk through the iconic 1000-pillar corridor.</p>
+                <span class="place-dist"><span class="material-symbols-outlined" style="font-size:0.9rem">near_me</span> ~55 km away</span>
+              </div>
+            </div>
+            <div class="place-slide">
+              <div class="place-img-wrap"><img src="dhanushkodi.png" alt="Dhanushkodi Beach" loading="lazy"/><div class="place-overlay"></div></div>
+              <div class="place-info">
+                <span class="material-symbols-outlined place-icon">beach_access</span>
+                <h4>Dhanushkodi Beach</h4>
+                <p>The ghost town at the tip of India where two oceans meet — hauntingly beautiful.</p>
+                <span class="place-dist"><span class="material-symbols-outlined" style="font-size:0.9rem">near_me</span> ~80 km away</span>
+              </div>
+            </div>
+            <div class="place-slide">
+              <div class="place-img-wrap"><img src="pamban.png" alt="Pamban Bridge" loading="lazy"/><div class="place-overlay"></div></div>
+              <div class="place-info">
+                <span class="material-symbols-outlined place-icon">train</span>
+                <h4>Pamban Bridge</h4>
+                <p>India's first sea bridge — a magnificent engineering marvel spanning the ocean.</p>
+                <span class="place-dist"><span class="material-symbols-outlined" style="font-size:0.9rem">near_me</span> ~60 km away</span>
+              </div>
+            </div>
+            <div class="place-slide">
+              <div class="place-img-wrap"><img src="kalam.png" alt="Kalam Memorial" loading="lazy"/><div class="place-overlay"></div></div>
+              <div class="place-info">
+                <span class="material-symbols-outlined place-icon">museum</span>
+                <h4>Kalam Memorial</h4>
+                <p>A tribute to Missile Man Dr. APJ Abdul Kalam in his beloved hometown Rameswaram.</p>
+                <span class="place-dist"><span class="material-symbols-outlined" style="font-size:0.9rem">near_me</span> ~15 km away</span>
+              </div>
+            </div>
+            <div class="place-slide">
+              <div class="place-img-wrap"><img src="kothandaramar.jpg" alt="Kothandaramar Temple" loading="lazy"/><div class="place-overlay"></div></div>
+              <div class="place-info">
+                <span class="material-symbols-outlined place-icon">temple_hindu</span>
+                <h4>Kothandaramar Temple</h4>
+                <p>Historic 500-year-old coastal shrine surrounded by the sea where Vibhishana was crowned.</p>
+                <span class="place-dist"><span class="material-symbols-outlined" style="font-size:0.9rem">near_me</span> ~60 km away</span>
+              </div>
+            </div>
+
+            <!-- 6: Coral Beach -->
+            <div class="place-slide">
+              <div class="place-img-wrap"><img src="coral-beach.jpg" alt="Coral Beach" loading="lazy"/><div class="place-overlay"></div></div>
+              <div class="place-info">
+                <span class="material-symbols-outlined place-icon">water</span>
+                <h4>Coral Beach</h4>
+                <p>Pristine beach famed for coral formations and crystal-clear turquoise waters.</p>
+                <span class="place-dist"><span class="material-symbols-outlined" style="font-size:0.9rem">near_me</span> ~70 km away</span>
+              </div>
+            </div>
+
+            <!-- 7: Ariyaman Beach -->
+            <div class="place-slide">
+              <div class="place-img-wrap"><img src="ariyaman-beach.jpg" alt="Ariyaman Beach" loading="lazy"/><div class="place-overlay"></div></div>
+              <div class="place-info">
+                <span class="material-symbols-outlined place-icon">beach_access</span>
+                <h4>Ariyaman (Kushi) Beach</h4>
+                <p>Calm family beach with shallow waters, casuarina groves and joyful coastal vibes.</p>
+                <span class="place-dist"><span class="material-symbols-outlined" style="font-size:0.9rem">near_me</span> ~50 km away</span>
+              </div>
+            </div>
+
+            <!-- 8: Karangadu Mangrove -->
+            <div class="place-slide">
+              <div class="place-img-wrap"><img src="mangrove.jpg" alt="Karangadu Mangrove" loading="lazy"/><div class="place-overlay"></div></div>
+              <div class="place-info">
+                <span class="material-symbols-outlined place-icon">forest</span>
+                <h4>Karangadu Mangrove</h4>
+                <p>Tranquil boat rides through lush coastal mangrove labyrinth — a unique eco-treasure.</p>
+                <span class="place-dist"><span class="material-symbols-outlined" style="font-size:0.9rem">near_me</span> ~30 km away</span>
+              </div>
+            </div>
+
+            <!-- 9: Devipattinam -->
+            <div class="place-slide">
+              <div class="place-img-wrap"><img src="devipattinam.jpg" alt="Devipattinam Navabashanam" loading="lazy"/><div class="place-overlay"></div></div>
+              <div class="place-info">
+                <span class="material-symbols-outlined place-icon">temple_hindu</span>
+                <h4>Devipattinam</h4>
+                <p>Nine stone idols (Navabashanam) in the sea — a sacred and unique spiritual marvel.</p>
+                <span class="place-dist"><span class="material-symbols-outlined" style="font-size:0.9rem">near_me</span> ~20 km away</span>
+              </div>
+            </div>
+
+            <!-- 10: Ramalinga Vilasam Palace -->
+            <div class="place-slide">
+              <div class="place-img-wrap"><img src="palace.jpg" alt="Ramalinga Vilasam Palace" loading="lazy"/><div class="place-overlay"></div></div>
+              <div class="place-info">
+                <span class="material-symbols-outlined place-icon">castle</span>
+                <h4>Ramalinga Vilasam Palace</h4>
+                <p>Grand heritage palace with ancient royal murals, carved pillars and Tamil architecture.</p>
+                <span class="place-dist"><span class="material-symbols-outlined" style="font-size:0.9rem">near_me</span> ~10 km away</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <button class="carousel-btn next" id="places-next" onclick="shiftPlace(1)">
+          <span class="material-symbols-outlined">chevron_right</span>
+        </button>
+      </div>
+      <!-- Dots -->
+      <div class="carousel-dots" id="carousel-dots"></div>
+      <p class="swipe-hint" id="swipe-hint">
+        <span class="material-symbols-outlined" style="font-size:1.1rem;vertical-align:middle">swipe</span>
+        Swipe to explore more places
+      </p>
+    </div>
+  </section>
+
+  <!-- ✦ Kanchipuram Zari Divider ✦ -->
+  <div class="zari-divider"></div>
+
+  <!-- ─── FOOTER ─── -->
+  <footer class="wedding-footer">
+    <div class="footer-garland">
+      <span class="material-symbols-outlined fg-icon" style="color:#e63946">local_florist</span>
+      <span class="material-symbols-outlined fg-icon" style="color:#C8942A">spa</span>
+      <span class="material-symbols-outlined fg-icon" style="color:#f4a261">local_florist</span>
+      <span class="material-symbols-outlined fg-icon" style="color:#e63946">local_florist</span>
+      <span class="material-symbols-outlined fg-icon" style="color:#2d6a4f">eco</span>
+      <span class="material-symbols-outlined fg-icon" style="color:#e63946">local_florist</span>
+      <span class="material-symbols-outlined fg-icon" style="color:#f4a261">local_florist</span>
+      <span class="material-symbols-outlined fg-icon" style="color:#C8942A">spa</span>
+      <span class="material-symbols-outlined fg-icon" style="color:#e63946">local_florist</span>
+    </div>
+    <div class="footer-body">
+      <span class="footer-om">🕉️</span>
+      <h3 class="footer-names">Ashokkumar &amp; Pradeepa</h3>
+      <p class="footer-date">November 13, 2026 &nbsp;·&nbsp; GS Mahal &nbsp;·&nbsp; Ramanathapuram</p>
+      <p class="footer-quote">"Two souls, one journey. With love &amp; eternal blessings."</p>
+      <div class="footer-icons">
+        <span class="material-symbols-outlined" style="color:#e63946;font-size:1.5rem">favorite</span>
+        <span class="material-symbols-outlined" style="color:#C8942A;font-size:1.5rem">spa</span>
+        <span class="material-symbols-outlined" style="color:#e63946;font-size:1.5rem">favorite</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ─── FLOATING QUICK CONTROLS ─── -->
+  <div class="floating-controls" id="floating-controls">
+    <!-- Music BGM Toggle Button -->
+    <button type="button" class="float-btn music-btn" id="music-btn" onclick="toggleBGM()" aria-label="Toggle Background Music" title="Play / Pause Music">
+      <span class="material-symbols-outlined music-icon" id="music-icon">music_note</span>
+      <div class="music-wave" id="music-wave">
+        <span></span><span></span><span></span>
+      </div>
+    </button>
+
+    <!-- WhatsApp Share -->
+    <button type="button" class="float-btn share-btn" onclick="shareOnWhatsApp()" aria-label="Share on WhatsApp" title="Share on WhatsApp">
+      <svg viewBox="0 0 24 24" width="22" height="22" fill="#fff">
+        <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 15 3.8 13.47 3.8 11.91C3.81 7.37 7.5 3.67 12.05 3.67M9.53 7.34C9.36 7.34 9.09 7.4 8.87 7.65C8.65 7.9 8.02 8.49 8.02 9.7C8.02 10.91 8.9 12.07 9.02 12.24C9.14 12.41 10.74 14.89 13.19 15.95C15.23 16.83 15.64 16.66 16.08 16.62C16.53 16.58 17.51 16.03 17.72 15.45C17.93 14.87 17.93 14.37 17.87 14.27C17.81 14.17 17.64 14.11 17.39 13.98C17.14 13.86 15.91 13.25 15.68 13.17C15.45 13.09 15.29 13.05 15.12 13.3C14.95 13.55 14.47 14.11 14.33 14.28C14.18 14.44 14.04 14.46 13.79 14.34C13.54 14.21 12.75 13.95 11.8 13.11C11.07 12.45 10.57 11.64 10.43 11.39C10.28 11.14 10.41 11 10.54 10.88C10.65 10.77 10.78 10.6 10.91 10.45C11.04 10.3 11.08 10.19 11.16 10.02C11.25 9.85 11.21 9.71 11.14 9.58C11.08 9.46 10.6 8.27 10.39 7.79C10.2 7.31 10 7.37 9.85 7.36C9.7 7.35 9.53 7.34 9.53 7.34Z"/>
+      </svg>
+    </button>
+
+    <!-- Scroll to Top -->
+    <button type="button" class="float-btn top-btn" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Scroll to top" title="Scroll to Top">
+      <span class="material-symbols-outlined">arrow_upward</span>
+    </button>
+  </div>
+
+  <!-- Background Music Audio Element -->
+  <audio id="bgm-audio" loop preload="auto">
+    <source src="wedding-bgm.mp3" type="audio/mpeg"/>
+    <source src="WhatsApp Audio 2026-10-29 at 6.03.15 PM.mpeg" type="audio/mpeg"/>
+  </audio>
+
+</div><!-- end #main-invitation -->
+<script src="script.js"></script>
+</body>
+</html>
