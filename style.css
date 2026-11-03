@@ -1333,34 +1333,163 @@ body.lang-ta .pavilion-ribbon-bar .ribbon-title {
   50%      { filter: drop-shadow(0 0 18px #FF6600) drop-shadow(0 0 28px #FFA500); }
 }
 
-/* Dual Wings Under Photo: Groom (Left), Saree-Veshti Knot (Center) & Bride (Right) */
-.pavilion-couple-wings {
+/* ==========================================================================
+   ROYAL FLOATING GLASS BANNER: GROOM (LEFT), SACRED WEDDING KNOT (CENTER) & BRIDE (RIGHT)
+   ========================================================================== */
+.pavilion-royal-banner {
   display: grid;
   grid-template-columns: 1fr auto 1fr;
-  align-items: stretch;
-  gap: clamp(10px, 1.8vw, 20px);
+  align-items: center;
+  gap: clamp(10px, 2vw, 24px);
   width: 100%;
-  max-width: 940px;
-  margin: 0.8rem auto 0 auto;
+  max-width: 920px;
+  margin: 1rem auto 0.4rem auto;
+  padding: clamp(14px, 2.2vw, 22px) clamp(12px, 2vw, 24px);
+  background: linear-gradient(145deg, rgba(8, 22, 54, 0.94) 0%, rgba(16, 40, 92, 0.88) 50%, rgba(6, 18, 46, 0.96) 100%);
+  backdrop-filter: blur(24px) saturate(200%);
+  -webkit-backdrop-filter: blur(24px) saturate(200%);
+  border: 1.5px solid var(--gold-light);
+  outline: 1px dashed rgba(255, 215, 79, 0.35);
+  outline-offset: -5px;
+  border-radius: 22px;
+  box-shadow: 
+    0 14px 40px rgba(0, 0, 0, 0.7), 
+    0 0 28px rgba(212, 175, 55, 0.3), 
+    inset 0 1px 2px rgba(255, 255, 255, 0.3);
+  overflow: hidden;
+  box-sizing: border-box;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Sacred Saree-Veshti Knot (Thali / திருமாங்கல்யம்) & Prominent Weds in Center */
-.pavilion-knot-centerpiece {
+.pavilion-royal-banner:hover {
+  transform: translateY(-2px);
+  box-shadow: 
+    0 18px 48px rgba(0, 0, 0, 0.8), 
+    0 0 35px rgba(212, 175, 55, 0.4);
+}
+
+/* Individual Person Side (Groom / Bride) in the Single Seamless Banner */
+.banner-person-side {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;
+  min-width: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.banner-role-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: clamp(0.65rem, 1.3vw, 0.74rem);
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: var(--gold-light);
+  margin-bottom: 4px;
+  text-transform: uppercase;
+  background: linear-gradient(135deg, rgba(255, 215, 79, 0.18) 0%, rgba(212, 175, 55, 0.08) 100%);
+  border: 1px solid rgba(255, 215, 79, 0.4);
+  padding: 2px 11px;
+  border-radius: 9999px;
+  white-space: nowrap;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.35);
+}
+body.lang-ta .banner-role-badge {
+  font-family: var(--font-tamil);
+  letter-spacing: 0.8px;
+}
+.banner-role-badge .material-symbols-outlined {
+  font-size: 0.95rem;
+}
+
+/* Couple Names: Pristine Uniform Warm Ivory with Regal Shadow & Gold Ambience */
+.banner-couple-name {
+  font-family: var(--font-tamil);
+  font-size: clamp(1rem, 2.1vw, 1.35rem);
+  font-weight: 800;
+  color: #FFFDF5;
+  line-height: 1.22;
+  margin: 3px 0 5px 0;
+  min-height: 2.3em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  text-wrap: balance;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.95), 0 0 10px rgba(255, 215, 79, 0.35);
+}
+body.lang-en .banner-couple-name {
+  font-family: var(--font-royal);
+  font-size: clamp(0.98rem, 2vw, 1.3rem);
+  letter-spacing: 0.5px;
+}
+
+/* Parents in Balanced Stack with Royal Relation Pill */
+.banner-parents-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  width: 100%;
+  text-align: center;
+  margin-top: 1px;
+  box-sizing: border-box;
+}
+
+.banner-relation-pill {
+  display: inline-block;
+  font-size: clamp(0.58rem, 1.2vw, 0.65rem);
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #FFD54F;
+  background: rgba(255, 215, 79, 0.15);
+  border: 1px solid rgba(255, 215, 79, 0.35);
+  padding: 1px 7px;
+  border-radius: 9999px;
+  line-height: 1.2;
+  text-transform: lowercase;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+.banner-parent-names {
+  font-size: clamp(0.68rem, 1.6vw, 0.80rem);
+  color: #FFFDF5;
+  font-weight: 600;
+  line-height: 1.34;
+  text-align: center;
+  margin: 0;
+  width: 100%;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.95);
+  white-space: normal;
+  word-break: normal;
+}
+body.lang-ta .banner-parent-names {
+  font-family: var(--font-tamil);
+  letter-spacing: 0.2px;
+}
+
+/* Sacred Saree-Veshti Knot & Weds Centerpiece */
+.banner-knot-centerpiece {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   align-self: center;
   gap: 4px;
-  padding: 0 4px;
+  padding: 0 6px;
   flex-shrink: 0;
 }
 
 .knot-vatti-icon {
-  width: clamp(65px, 8.5vw, 84px);
-  height: clamp(65px, 8.5vw, 84px);
+  width: clamp(56px, 7.5vw, 76px);
+  height: clamp(56px, 7.5vw, 76px);
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(255, 215, 79, 0.3) 0%, transparent 72%);
+  background: radial-gradient(circle, rgba(255, 215, 79, 0.32) 0%, transparent 72%);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1368,186 +1497,18 @@ body.lang-ta .pavilion-ribbon-bar .ribbon-title {
 }
 
 .saree-vatti-img {
-  width: clamp(58px, 7.5vw, 76px);
+  width: clamp(48px, 6.5vw, 68px);
   height: auto;
-  filter: drop-shadow(0 3px 12px rgba(212, 175, 55, 0.85));
+  filter: drop-shadow(0 3px 12px rgba(212, 175, 55, 0.9));
 }
 
 .grand-weds-text {
   font-family: var(--font-cursive);
-  font-size: clamp(1.8rem, 3.5vw, 2.4rem);
+  font-size: clamp(1.6rem, 3.2vw, 2.2rem);
   color: var(--gold-light);
   line-height: 1;
-  text-shadow: 0 0 16px rgba(255, 215, 79, 0.7);
+  text-shadow: 0 0 16px rgba(255, 215, 79, 0.75);
   letter-spacing: 1px;
-}
-
-/* Individual Wing (Groom / Bride Profile Card) */
-.pavilion-person-wing {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  box-sizing: border-box;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1.2px solid rgba(255, 215, 79, 0.35);
-  border-radius: 18px;
-  padding: clamp(14px, 1.8vw, 20px);
-  text-align: center;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35), inset 0 1px 1px rgba(255, 255, 255, 0.15);
-  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-.pavilion-person-wing:hover {
-  transform: translateY(-2px);
-  border-color: var(--gold-primary);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5), 0 0 15px rgba(212, 175, 55, 0.3);
-}
-
-.wing-role-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 5px;
-  font-size: 0.74rem;
-  font-weight: 700;
-  letter-spacing: 2px;
-  color: var(--gold-light);
-  margin-bottom: 5px;
-  text-transform: uppercase;
-}
-body.lang-ta .wing-role-badge {
-  font-family: var(--font-tamil);
-  letter-spacing: 1px;
-}
-.wing-role-badge .material-symbols-outlined {
-  font-size: 1.05rem;
-}
-
-.wing-name {
-  font-family: var(--font-tamil);
-  font-size: clamp(1.18rem, 2vw, 1.48rem);
-  font-weight: 800;
-  color: #FFFDF5;
-  line-height: 1.25;
-  margin-bottom: 0.35rem;
-  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.6);
-}
-body.lang-en .wing-name {
-  font-family: var(--font-royal);
-  font-size: clamp(1.08rem, 1.8vw, 1.38rem);
-}
-
-.degree-tag {
-  font-family: var(--font-sans);
-  font-size: 0.78rem;
-  font-weight: 700;
-  color: var(--gold-light);
-  background: rgba(255, 215, 79, 0.15);
-  border: 1px solid rgba(255, 215, 79, 0.4);
-  padding: 1px 6px;
-  border-radius: 6px;
-  margin-left: 3px;
-  vertical-align: middle;
-}
-
-.wing-work-pill {
-  display: inline-flex;
-  align-items: center;
-  gap: 5px;
-  font-size: 0.8rem;
-  font-weight: 600;
-  color: #fff9c4;
-  background: rgba(255, 255, 255, 0.07);
-  padding: 3px 11px;
-  border-radius: 10px;
-  border: 1px solid rgba(255, 215, 79, 0.35);
-  margin-bottom: 0.55rem;
-}
-.wing-work-pill .material-symbols-outlined {
-  font-size: 0.92rem;
-  color: var(--gold-light);
-}
-
-.wing-divider {
-  width: 75%;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(255, 215, 79, 0.4), transparent);
-  margin: 0.5rem auto 0.6rem auto;
-}
-
-.wing-parents-block {
-  margin-bottom: 0.6rem;
-}
-
-.parents-label {
-  display: block;
-  font-size: 0.72rem;
-  color: var(--gold-light);
-  font-weight: 700;
-  letter-spacing: 1px;
-  margin-bottom: 1px;
-}
-
-.parents-names {
-  font-size: 0.88rem;
-  color: #FFFDF5;
-  font-weight: 700;
-  line-height: 1.35;
-}
-
-.wing-contact-block {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 5px;
-  margin-top: auto;
-  width: 100%;
-}
-
-.person-loc {
-  display: inline-flex;
-  align-items: center;
-  gap: 3px;
-  font-size: 0.8rem;
-  color: var(--text-light);
-  font-weight: 600;
-}
-.person-loc .material-symbols-outlined {
-  font-size: 0.92rem;
-  color: var(--gold-light);
-}
-
-.person-call-wrap {
-  display: flex;
-  gap: 5px;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.person-call-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 4px;
-  background: linear-gradient(135deg, rgba(255, 215, 79, 0.22) 0%, rgba(212, 175, 55, 0.12) 100%);
-  border: 1.2px solid var(--gold-primary);
-  color: #fff9c4;
-  text-decoration: none;
-  font-size: 0.76rem;
-  font-weight: 700;
-  padding: 3px 10px;
-  border-radius: 16px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
-  transition: all 0.25s ease;
-}
-
-.person-call-btn:hover {
-  background: var(--gold-foil);
-  color: #061124;
-  transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(212, 175, 55, 0.6);
-}
-.person-call-btn .material-symbols-outlined {
-  font-size: 0.88rem;
 }
 
 /* ==========================================================================
@@ -1579,36 +1540,15 @@ body.lang-en .wing-name {
   .mandap-lamp.lamp-left { left: 6px; }
   .mandap-lamp.lamp-right { right: 6px; }
 
-  .pavilion-couple-wings {
+  .pavilion-royal-banner {
     display: grid;
     grid-template-columns: 1fr auto 1fr;
-    align-items: stretch;
-    gap: clamp(4px, 1.5vw, 12px);
+    align-items: center;
+    gap: clamp(6px, 1.8vw, 16px);
     width: 100%;
     margin-top: 0.6rem;
-  }
-
-  .groom-wing {
-    order: 1;
-  }
-
-  .pavilion-knot-centerpiece {
-    order: 2;
-    padding: 0 2px;
-    flex-shrink: 0;
-    align-self: center;
-  }
-
-  .bride-wing {
-    order: 3;
-  }
-
-  .pavilion-person-wing {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    padding: clamp(10px, 1.8vw, 16px) clamp(6px, 1.2vw, 10px);
-    border-radius: 16px;
+    padding: clamp(12px, 2vw, 18px) clamp(8px, 1.6vw, 14px);
+    border-radius: 18px;
   }
 }
 
@@ -1644,166 +1584,92 @@ body.lang-en .wing-name {
   .mandap-lamp.lamp-left { left: 4px; }
   .mandap-lamp.lamp-right { right: 4px; }
 
-  .pavilion-couple-wings {
+  .pavilion-royal-banner {
     grid-template-columns: 1fr auto 1fr;
-    align-items: stretch;
-    gap: 4px;
-  }
-
-  .pavilion-person-wing {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    padding: 8px 4px 10px 4px;
-    border-radius: 14px;
-  }
-
-  .wing-role-badge {
-    font-size: 0.62rem;
-    letter-spacing: 0.5px;
-    margin-bottom: 2px;
-    gap: 3px;
-  }
-  .wing-role-badge .material-symbols-outlined {
-    font-size: 0.80rem;
-  }
-
-  .wing-name {
-    font-size: clamp(0.84rem, 2.7vw, 1.02rem);
-    line-height: 1.22;
-    margin-bottom: 0.2rem;
-  }
-  body.lang-en .wing-name {
-    font-size: clamp(0.80rem, 2.4vw, 0.95rem);
-  }
-
-  .degree-tag {
-    font-size: 0.58rem;
-    padding: 1px 3px;
-    margin-left: 2px;
-  }
-
-  .wing-work-pill {
-    font-size: clamp(0.58rem, 1.8vw, 0.66rem);
-    padding: 2px 4px;
-    border-radius: 6px;
-    margin-bottom: 0.35rem;
-    gap: 3px;
-    white-space: normal;
-    text-align: center;
-    line-height: 1.15;
-    max-width: 100%;
-  }
-  .wing-work-pill .material-symbols-outlined {
-    font-size: 0.70rem;
-  }
-
-  .wing-divider {
-    width: 90%;
-    margin: 0.3rem auto 0.4rem auto;
-  }
-
-  .wing-parents-block {
-    margin-bottom: 0.35rem;
-  }
-  .parents-label {
-    font-size: 0.60rem;
-    margin-bottom: 1px;
-    letter-spacing: 0.5px;
-  }
-  .parents-names {
-    font-size: clamp(0.66rem, 2vw, 0.74rem);
-    line-height: 1.25;
-  }
-
-  .wing-contact-block {
-    gap: 4px;
-    margin-top: auto;
-    width: 100%;
-  }
-  .person-loc {
-    font-size: clamp(0.62rem, 1.8vw, 0.68rem);
-    line-height: 1.2;
-    text-align: center;
-    gap: 2px;
-  }
-  .person-loc .material-symbols-outlined {
-    font-size: 0.70rem;
-  }
-
-  .person-call-wrap {
-    flex-direction: column;
     align-items: center;
     gap: 3px;
-    width: 100%;
+    padding: 10px 6px 12px 6px;
+    border-radius: 18px;
+    outline-offset: -4px;
+    overflow: hidden;
   }
 
-  .person-call-btn {
-    font-size: clamp(0.62rem, 1.8vw, 0.68rem);
-    padding: 3px 5px;
-    border-radius: 10px;
+  .banner-role-badge {
+    font-size: 0.58rem;
+    padding: 1px 7px;
+    margin-bottom: 2px;
     gap: 2px;
-    max-width: 100%;
-    justify-content: center;
-    white-space: nowrap;
+    letter-spacing: 0.5px;
   }
-  .person-call-btn .material-symbols-outlined {
-    font-size: 0.72rem;
+  .banner-role-badge .material-symbols-outlined {
+    font-size: 0.70rem;
   }
 
-  .pavilion-knot-centerpiece {
+  .banner-couple-name {
+    font-size: clamp(0.78rem, 2.5vw, 0.92rem);
+    line-height: 1.2;
+    margin: 2px 0 3px 0;
+    min-height: 2.3em;
+  }
+  body.lang-en .banner-couple-name {
+    font-size: clamp(0.76rem, 2.4vw, 0.88rem);
+  }
+
+  .banner-relation-pill {
+    font-size: 0.54rem;
+    padding: 1px 5px;
+  }
+
+  .banner-parent-names {
+    font-size: clamp(0.58rem, 1.95vw, 0.68rem);
+    line-height: 1.26;
+  }
+  body.lang-ta .banner-parent-names {
+    font-size: clamp(0.58rem, 1.95vw, 0.68rem);
+  }
+
+  .banner-knot-centerpiece {
     gap: 2px;
     padding: 0 1px;
     align-self: center;
   }
   .knot-vatti-icon {
-    width: clamp(36px, 9vw, 46px);
-    height: clamp(36px, 9vw, 46px);
+    width: clamp(34px, 8.5vw, 42px);
+    height: clamp(34px, 8.5vw, 42px);
   }
   .saree-vatti-img {
-    width: clamp(30px, 7.5vw, 38px);
+    width: clamp(28px, 7vw, 35px);
   }
   .grand-weds-text {
-    font-size: clamp(1.1rem, 3.2vw, 1.35rem);
+    font-size: clamp(1.05rem, 3vw, 1.25rem);
   }
 }
 
 @media (max-width: 350px) {
-  .pavilion-couple-wings {
-    align-items: stretch;
+  .pavilion-royal-banner {
     gap: 2px;
+    padding: 8px 3px 10px 3px;
   }
-  .pavilion-person-wing {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    padding: 6px 2px 8px 2px;
+  .banner-couple-name {
+    font-size: 0.72rem;
+    min-height: 2.2em;
   }
-  .wing-contact-block {
-    margin-top: auto;
+  .banner-relation-pill {
+    font-size: 0.50rem;
+    padding: 1px 4px;
   }
-  .pavilion-knot-centerpiece {
-    align-self: center;
-  }
-  .wing-name {
-    font-size: 0.78rem;
-  }
-  .parents-names {
-    font-size: 0.64rem;
-  }
-  .person-call-btn {
-    font-size: 0.60rem;
-    padding: 2px 4px;
+  .banner-parent-names {
+    font-size: 0.54rem;
   }
   .knot-vatti-icon {
-    width: 32px;
-    height: 32px;
+    width: 28px;
+    height: 28px;
   }
   .saree-vatti-img {
-    width: 26px;
+    width: 22px;
   }
   .grand-weds-text {
-    font-size: 0.95rem;
+    font-size: 0.90rem;
   }
 }
 
