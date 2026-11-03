@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <defs>
+    <linearGradient id="goldGanesha" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFE082" />
+      <stop offset="50%" stop-color="#FFD54F" />
+      <stop offset="100%" stop-color="#B8860B" />
+    </linearGradient>
+    <radialGradient id="haloGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFF9C4" stop-opacity="0.9" />
+      <stop offset="80%" stop-color="#FFD54F" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#B8860B" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+  <circle cx="50" cy="50" r="48" fill="url(#haloGlow)" />
+  <circle cx="50" cy="50" r="46" stroke="url(#goldGanesha)" stroke-width="1.5" stroke-dasharray="3 2" fill="rgba(122, 16, 22, 0.4)" />
+  <circle cx="50" cy="50" r="42" stroke="url(#goldGanesha)" stroke-width="1" fill="none" />
+  
+  <!-- Crown / Mukut -->
+  <path d="M42 22 L50 14 L58 22 L54 28 L46 28 Z" fill="url(#goldGanesha)" stroke="#8B6914" stroke-width="0.5" />
+  <circle cx="50" cy="14" r="2.5" fill="#FFF" />
+  
+  <!-- Ganesha Ears & Head -->
+  <path d="M38 30 C30 25 24 35 28 44 C31 49 37 49 41 45" fill="none" stroke="url(#goldGanesha)" stroke-width="2.5" stroke-linecap="round" />
+  <path d="M62 30 C70 25 76 35 72 44 C69 49 63 49 59 45" fill="none" stroke="url(#goldGanesha)" stroke-width="2.5" stroke-linecap="round" />
+  
+  <!-- Forehead & Tilak / Thiruman -->
+  <path d="M46 32 Q50 35 54 32" stroke="url(#goldGanesha)" stroke-width="1.5" fill="none" />
+  <path d="M50 26 L50 34" stroke="#D32F2F" stroke-width="2" stroke-linecap="round" />
+  <circle cx="50" cy="35" r="1.5" fill="#FFC107" />
+  
+  <!-- Trunk Curve (Valampuri / Idampuri - Left curved) -->
+  <path d="M45 35 C48 42 49 48 47 56 C45 64 42 68 46 72 C49 75 56 74 57 68 C58 64 54 62 52 64 C50 66 52 69 54 69" fill="none" stroke="url(#goldGanesha)" stroke-width="3" stroke-linecap="round" />
+  
+  <!-- Broken Tusk (Right) & Full Tusk (Left) -->
+  <path d="M42 46 L38 48" stroke="#FFF" stroke-width="2.2" stroke-linecap="round" />
+  <path d="M58 46 L61 47" stroke="#FFF" stroke-width="2.2" stroke-linecap="round" />
+  
+  <!-- Modak / Laddu in Hand symbol -->
+  <circle cx="34" cy="56" r="3.5" fill="url(#goldGanesha)" />
+  <circle cx="34" cy="56" r="2" fill="#FFE082" />
+  
+  <!-- Abhaya Hasta (Blessing Hand) -->
+  <path d="M66 54 C68 50 64 47 62 50 C60 53 61 58 65 60 Z" fill="url(#goldGanesha)" />
+  <circle cx="64" cy="53" r="1" fill="#D32F2F" />
+  
+  <!-- Belly & Lotus Base -->
+  <path d="M36 68 C36 78 64 78 64 68" stroke="url(#goldGanesha)" stroke-width="2" fill="none" />
+  <path d="M30 84 C40 80 60 80 70 84 C62 88 38 88 30 84 Z" fill="url(#goldGanesha)" opacity="0.8" />
+  <path d="M35 84 Q50 78 65 84" stroke="#FFE082" stroke-width="1.5" fill="none" />
+</svg>
+

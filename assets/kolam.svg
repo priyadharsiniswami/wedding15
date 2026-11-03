@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <defs>
+    <linearGradient id="goldKolam" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFE082" />
+      <stop offset="50%" stop-color="#FFD54F" />
+      <stop offset="100%" stop-color="#B8860B" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Outer Decorative Ring -->
+  <circle cx="50" cy="50" r="46" stroke="url(#goldKolam)" stroke-width="1.2" stroke-dasharray="2 3" />
+  <circle cx="50" cy="50" r="41" stroke="url(#goldKolam)" stroke-width="0.8" />
+  
+  <!-- 8-Petal Kolam Lotus Mandala -->
+  <g stroke="url(#goldKolam)" stroke-width="1.5" fill="none">
+    <!-- 4 Cardinal Petals -->
+    <path d="M50 50 C40 30 40 16 50 10 C60 16 60 30 50 50 Z" />
+    <path d="M50 50 C40 70 40 84 50 90 C60 84 60 70 50 50 Z" />
+    <path d="M50 50 C30 40 16 40 10 50 C16 60 30 60 50 50 Z" />
+    <path d="M50 50 C70 40 84 40 90 50 C84 60 70 60 50 50 Z" />
+    
+    <!-- 4 Diagonal Petals -->
+    <path d="M50 50 C40 35 25 25 21 21 C25 25 35 40 50 50 Z" transform="rotate(45 50 50)" />
+    <path d="M50 50 C40 75 25 85 21 79 C25 75 35 60 50 50 Z" transform="rotate(45 50 50)" />
+    <path d="M50 50 C60 35 75 25 79 21 C75 25 65 40 50 50 Z" transform="rotate(45 50 50)" />
+    <path d="M50 50 C60 75 75 85 79 79 C75 75 65 60 50 50 Z" transform="rotate(45 50 50)" />
+  </g>
+  
+  <!-- Center Bindu & Inner Ring -->
+  <circle cx="50" cy="50" r="10" stroke="url(#goldKolam)" stroke-width="1.2" fill="rgba(184, 134, 11, 0.2)" />
+  <circle cx="50" cy="50" r="4" fill="url(#goldKolam)" />
+  
+  <!-- Outer Dots / Pullis -->
+  <circle cx="50" cy="8" r="1.5" fill="url(#goldKolam)" />
+  <circle cx="50" cy="92" r="1.5" fill="url(#goldKolam)" />
+  <circle cx="8" cy="50" r="1.5" fill="url(#goldKolam)" />
+  <circle cx="92" cy="50" r="1.5" fill="url(#goldKolam)" />
+</svg>
+

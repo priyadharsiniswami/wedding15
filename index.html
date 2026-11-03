@@ -1,0 +1,927 @@
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+  
+  <!-- Open Graph & SEO metadata for WhatsApp / Social Sharing -->
+  <title>விக்னேஷ் & ஜீவிதா | திருமண அழைப்பிதழ் • Vignesh & Jeevitha Wedding Celebration</title>
+  <meta name="description" content="திருமண அழைப்பிதழ்: க. விக்னேஷ் பாண்டி B.Sc. & கா. ஜீவிதா M.Sc. | 15 நவம்பர் 2026, ஞாயிற்றுக்கிழமை | பரமக்குடி">
+  <meta property="og:title" content="விக்னேஷ் & ஜீவிதா திருமண அழைப்பிதழ் • Vignesh & Jeevitha Wedding Invitation">
+  <meta property="og:description" content="15.11.2026 ஞாயிறு காலை 6.05 - 7.25 மணிக்குள் சுப முகூர்த்தம் | பரமக்குடி">
+  <meta property="og:image" content="assets/couple-hero.jpg">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#d4af37">
+
+  <!-- Google Fonts: Tamil, Royal English Fonts, and Google Material Symbols -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&family=Great+Vibes&family=Mukta+Malar:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,500;1,600&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Google Material Symbols (Official Google Icons) -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+  <!-- Canvas Confetti Library for scratch card & celebration -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
+
+  <link rel="stylesheet" href="style.css?v=20261103_02">
+</head>
+<body class="lang-ta">
+
+  <!-- Floating Falling Petals Canvas -->
+  <canvas id="petalsCanvas"></canvas>
+
+  <!-- ==========================================================================
+       BACKGROUND MUSIC AUDIO PLAYER
+       ========================================================================== -->
+  <audio id="bgm-audio" src="assets/wedding-bgm.mp4" preload="auto" loop></audio>
+
+  <!-- ==========================================================================
+       FRONT ENTRANCE: SOUTH INDIAN TEMPLE DOUBLE DOORS WITH TOP TORANAM,
+       LIVE COUNTDOWN & TOUCH FOR MAGIC (REFERENCING WEDDING CARD THEME)
+       ========================================================================== -->
+  <div id="door-screen">
+    <div class="door-bg-overlay"></div>
+    
+    <!-- Top Flower & Leaf Toranam (Outside of Door) -->
+    <div class="door-toran-top"></div>
+    <div class="door-sparkles" id="door-sparkles"></div>
+
+    <!-- Centered Wedding Card Content in front of doors -->
+    <div class="door-content" id="doorContent">
+      
+      <!-- Auspicious Invocation in Glass Frame (Clear of Top Garland) -->
+      <div class="door-title-box">
+        <p class="door-invocation ta-only">✦ வாழ்க வளமுடன் ✦</p>
+        <p class="door-invocation en-only">✦ Warm Cordial Welcome ✦</p>
+
+        <h1 class="door-title ta-only">திருமண அழைப்பிதழ்</h1>
+        <h1 class="door-title en-only">Wedding Invitation</h1>
+      </div>
+
+      <div class="door-divider"><span>✦</span><span class="door-divider-line"></span><span>✦</span></div>
+
+      <!-- Couple Names in Majestic Calligraphy -->
+      <p class="door-names">
+        <span class="d-name ta-only">க. விக்னேஷ் பாண்டி</span>
+        <span class="d-name en-only">K. Vignesh Pandi</span>
+        <span class="door-amp">&amp;</span>
+        <span class="d-name ta-only">கா. ஜீவிதா</span>
+        <span class="d-name en-only">Ka. Jeevitha</span>
+      </p>
+
+      <!-- Prominent Pastel South Indian Garland Ceremony Arch Portrait -->
+      <div class="door-couple-preview">
+        <img src="assets/pastel-south-indian-ceremony.png" alt="Vignesh Pandi & Jeevitha Pastel Garland Ceremony" class="door-couple-img">
+        <div class="door-couple-ring"></div>
+      </div>
+
+      <!-- Live Real-Time Countdown Timer Strip on Door -->
+      <div class="door-countdown-wrap">
+        <div class="door-count-box">
+          <span class="d-num" id="doorDays">00</span>
+          <span class="d-lbl ta-only">நாட்கள்</span>
+          <span class="d-lbl en-only">DAYS</span>
+        </div>
+        <span class="d-sep">:</span>
+        <div class="door-count-box">
+          <span class="d-num" id="doorHours">00</span>
+          <span class="d-lbl ta-only">மணிகள்</span>
+          <span class="d-lbl en-only">HOURS</span>
+        </div>
+        <span class="d-sep">:</span>
+        <div class="door-count-box">
+          <span class="d-num" id="doorMins">00</span>
+          <span class="d-lbl ta-only">நிமிடம்</span>
+          <span class="d-lbl en-only">MINS</span>
+        </div>
+        <span class="d-sep">:</span>
+        <div class="door-count-box">
+          <span class="d-num" id="doorSecs">00</span>
+          <span class="d-lbl ta-only">நொடிகள்</span>
+          <span class="d-lbl en-only">SECS</span>
+        </div>
+      </div>
+
+      <!-- Grand Open Invitation Button (Matching Reference - No Mail Icon) -->
+      <button id="open-btn" class="door-open-btn" onclick="openInvitation()" aria-label="Open Wedding Invitation">
+        <span class="btn-open-bold">OPEN</span>
+        <span class="btn-magic-note ta-only">Touch here for Magic</span>
+        <span class="btn-magic-note en-only">Touch here for Magic</span>
+        <div class="btn-shine"></div>
+      </button>
+
+      <p class="door-date ta-only">15 · நவம்பர் · 2026 · ஞாயிற்றுக்கிழமை</p>
+      <p class="door-date en-only">Sunday · 15th November 2026</p>
+    </div>
+
+    <!-- Left Temple Carved Wooden Door -->
+    <div class="door-left">
+      <div class="door-panel-deco"></div>
+      <div class="door-brass-knocker"></div>
+    </div>
+
+    <!-- Right Temple Carved Wooden Door -->
+    <div class="door-right">
+      <div class="door-panel-deco"></div>
+      <div class="door-brass-knocker"></div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       STICKY GLASS TOPBAR (WITH TOP MANGO LEAF TORANAM)
+       ========================================================================== -->
+  <header class="app-topbar" id="appTopbar">
+    <!-- Top Flower & Leaf Toranam (On Top of Header) -->
+    <div class="south-indian-toran"></div>
+
+    <div class="topbar-inner">
+      
+      <!-- Couple Monogram / Brand in Topbar -->
+      <div class="topbar-monogram">
+        <img src="assets/monogram.svg" alt="V & J" class="topbar-mono-icon">
+        <span class="topbar-names">Vignesh ♡ Jeevitha</span>
+      </div>
+
+      <div class="topbar-actions">
+        <!-- Background Music Player Toggle -->
+        <button id="music-btn" class="glass-pill-btn music-btn is-playing" onclick="toggleBGM()" aria-label="Toggle Wedding Music" title="Play / Pause Music">
+          <span class="material-symbols-outlined topbar-icon" id="music-icon">music_note</span>
+          <span class="ta-only">இசை</span>
+          <span class="en-only">Music</span>
+        </button>
+
+        <!-- Language Switcher (தமிழ் / English) -->
+        <button id="langToggleBtn" class="glass-pill-btn lang-btn" aria-label="Switch Language">
+          <span class="material-symbols-outlined topbar-icon">language</span>
+          <span id="langLabel">English</span>
+        </button>
+
+        <!-- Petals Animation Toggle -->
+        <button id="petalsToggleBtn" class="glass-pill-btn petals-btn" title="Toggle Petals" aria-label="Toggle Flower Petals">
+          <span class="material-symbols-outlined topbar-icon">spa</span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       MAIN APP WRAPPER: WITH RICH TRADITIONAL TEMPLE BACKGROUND & GLASS LOOK
+       ========================================================================== -->
+  <main class="main-wrapper" id="mainContent">
+    
+    <!-- Traditional Mangala Vazhai Maram (Banana Trees - Pair of 2) -->
+    <div class="real-banana-tree real-banana-tree-left">
+      <img src="assets/banana-tree-vazhai.png" alt="Traditional Wedding Mangala Vazhai Maram" class="real-banana-img"/>
+    </div>
+    <div class="real-banana-tree real-banana-tree-right">
+      <img src="assets/banana-tree-vazhai.png" alt="Traditional Wedding Mangala Vazhai Maram" class="real-banana-img flip-h"/>
+    </div>
+
+    <!-- Fixed Traditional Background Artwork (Temple Sanctuary with Sky & Tank) -->
+    <div class="wrapper-bg-artwork">
+      <img src="assets/temple-tank-sky.jpg" alt="South Indian Temple Sanctuary" class="wrapper-bg-img">
+    </div>
+
+    <!-- ==========================================================================
+         HERO SECTION: SOUTH INDIAN WEDDING SILK CARD WITH ORNATE CORNERS
+         (REFERENCING WEDDING-ROSY-CHI-24.VERCEL.APP FOR AUTHENTIC CARD STYLE)
+         ========================================================================== -->
+    <section class="section hero-section" id="heroSection">
+      
+      <div class="hero-glass-card wedding-card-panel">
+        
+        <!-- 4 Authentic SVG Gold Corner Ornaments -->
+        <div class="card-corners">
+          <div class="corner-ornament co-tl">
+            <svg viewBox="0 0 44 44" width="34" height="34"><path d="M2 42 L2 14 Q2 2 14 2 L42 2" fill="none" stroke="#C8942A" stroke-width="2.2" stroke-linecap="round"/><path d="M7 42 L7 16 Q7 7 16 7 L42 7" fill="none" stroke="#E5B85C" stroke-width="1.2" stroke-linecap="round"/><circle cx="15" cy="15" r="3.5" fill="#C8942A"/><circle cx="15" cy="15" r="1.5" fill="#FFF2B8"/><circle cx="26" cy="11" r="2" fill="#C8942A"/><circle cx="11" cy="26" r="2" fill="#C8942A"/><path d="M15 11 Q15 4 22 7" fill="none" stroke="#C8942A" stroke-width="1.2"/><path d="M11 15 Q4 15 7 22" fill="none" stroke="#C8942A" stroke-width="1.2"/></svg>
+          </div>
+          <div class="corner-ornament co-tr">
+            <svg viewBox="0 0 44 44" width="34" height="34" style="transform:scaleX(-1)"><path d="M2 42 L2 14 Q2 2 14 2 L42 2" fill="none" stroke="#C8942A" stroke-width="2.2" stroke-linecap="round"/><path d="M7 42 L7 16 Q7 7 16 7 L42 7" fill="none" stroke="#E5B85C" stroke-width="1.2" stroke-linecap="round"/><circle cx="15" cy="15" r="3.5" fill="#C8942A"/><circle cx="15" cy="15" r="1.5" fill="#FFF2B8"/><circle cx="26" cy="11" r="2" fill="#C8942A"/><circle cx="11" cy="26" r="2" fill="#C8942A"/><path d="M15 11 Q15 4 22 7" fill="none" stroke="#C8942A" stroke-width="1.2"/><path d="M11 15 Q4 15 7 22" fill="none" stroke="#C8942A" stroke-width="1.2"/></svg>
+          </div>
+          <div class="corner-ornament co-bl">
+            <svg viewBox="0 0 44 44" width="34" height="34" style="transform:scaleY(-1)"><path d="M2 42 L2 14 Q2 2 14 2 L42 2" fill="none" stroke="#C8942A" stroke-width="2.2" stroke-linecap="round"/><path d="M7 42 L7 16 Q7 7 16 7 L42 7" fill="none" stroke="#E5B85C" stroke-width="1.2" stroke-linecap="round"/><circle cx="15" cy="15" r="3.5" fill="#C8942A"/><circle cx="15" cy="15" r="1.5" fill="#FFF2B8"/><circle cx="26" cy="11" r="2" fill="#C8942A"/><circle cx="11" cy="26" r="2" fill="#C8942A"/><path d="M15 11 Q15 4 22 7" fill="none" stroke="#C8942A" stroke-width="1.2"/><path d="M11 15 Q4 15 7 22" fill="none" stroke="#C8942A" stroke-width="1.2"/></svg>
+          </div>
+          <div class="corner-ornament co-br">
+            <svg viewBox="0 0 44 44" width="34" height="34" style="transform:scale(-1)"><path d="M2 42 L2 14 Q2 2 14 2 L42 2" fill="none" stroke="#C8942A" stroke-width="2.2" stroke-linecap="round"/><path d="M7 42 L7 16 Q7 7 16 7 L42 7" fill="none" stroke="#E5B85C" stroke-width="1.2" stroke-linecap="round"/><circle cx="15" cy="15" r="3.5" fill="#C8942A"/><circle cx="15" cy="15" r="1.5" fill="#FFF2B8"/><circle cx="26" cy="11" r="2" fill="#C8942A"/><circle cx="11" cy="26" r="2" fill="#C8942A"/><path d="M15 11 Q15 4 22 7" fill="none" stroke="#C8942A" stroke-width="1.2"/><path d="M11 15 Q4 15 7 22" fill="none" stroke="#C8942A" stroke-width="1.2"/></svg>
+          </div>
+        </div>
+
+        <!-- ── Top Auspicious Blessing & Grand Title ── -->
+        <div class="hero-header-box">
+          <p class="hero-blessing">✦ வாழ்க வளமுடன் ✦</p>
+          <h1 class="main-title ta-only">திருமண அழைப்பிதழ்</h1>
+          <h1 class="main-title en-only">Wedding Invitation</h1>
+          
+          <div class="gold-divider"><span>❖</span></div>
+
+          <p class="greeting-verse ta-only">
+            பெரியோர்களின் நல்லாசிகளுடனும், உற்றார் உறவினர்களின் நல்வாழ்த்துகளுடனும் நடைபெறும் எங்கள் இல்லத் திருமண விழாவிற்கு தாங்கள் சுற்றம் சூழ வருகை தந்து மணமக்களை வாழ்த்த அன்புடன் அழைக்கின்றோம்.
+          </p>
+          <p class="greeting-verse en-only">
+            With the cherished blessings of our beloved elders and surrounded by loving family and friends, we cordially invite you and your family to grace the auspicious wedding celebration of Vignesh Pandi and Jeevitha.
+          </p>
+        </div>
+
+        <!-- ── COMPACT ROYAL WEDDING PAVILION: GROOM & BRIDE (DISTINCT TEMPLE ARCH STYLE) ── -->
+        <div class="royal-pavilion-frame">
+          
+          <!-- Top Royal Ribbon Header (Capsule Scroll Styling) -->
+          <div class="pavilion-ribbon-bar">
+            <span class="ribbon-sparkle">✦</span>
+            <span class="ribbon-title ta-only">சுப முகூர்த்த தம்பதிகள்</span>
+            <span class="ribbon-title en-only">Holy Union &amp; Blessings</span>
+            <span class="ribbon-sparkle">✦</span>
+          </div>
+
+          <!-- Centered Mandap Arch Portrait (Positioned on Top of Details) -->
+          <div class="pavilion-top-photo-arch">
+            <div class="compact-arch-viewport">
+              <img src="assets/anime-temple-wedding-full.png" alt="க. விக்னேஷ் பாண்டி &amp; கா. ஜீவிதா" class="compact-couple-img" />
+              
+              <!-- Radiant Brass Kuthu Vilakku Lamps -->
+              <div class="mandap-lamp lamp-left">
+                <img src="assets/kuthuvilakku.svg" alt="Brass Lamp Left" />
+              </div>
+              <div class="mandap-lamp lamp-right">
+                <img src="assets/kuthuvilakku.svg" alt="Brass Lamp Right" />
+              </div>
+              
+              <div class="compact-arch-glow"></div>
+            </div>
+          </div>
+
+          <!-- Dual Wings: Groom (Left), Saree-Veshti Knot (Center) & Bride (Right) -->
+          <div class="pavilion-couple-wings">
+            
+            <!-- GROOM WING (மணமகன்) -->
+            <div class="pavilion-person-wing groom-wing">
+              <div class="wing-role-badge">
+                <span class="material-symbols-outlined">person</span>
+                <span class="ta-only">மணமகன்</span>
+                <span class="en-only">GROOM</span>
+              </div>
+              
+              <h2 class="wing-name ta-only">க. விக்னேஷ் பாண்டி <span class="degree-tag">B.Sc.,</span></h2>
+              <h2 class="wing-name en-only">K. Vignesh Pandi <span class="degree-tag">B.Sc.,</span></h2>
+              
+              <div class="wing-work-pill">
+                <span class="material-symbols-outlined">account_balance</span>
+                <span>Tamilnadu Grama Bank</span>
+              </div>
+
+              <div class="wing-divider"></div>
+
+              <div class="wing-parents-block">
+                <span class="parents-label ta-only">பெற்றோர் (s/o):</span>
+                <span class="parents-label en-only">Parents (s/o):</span>
+                <p class="parents-names ta-only">திரு. ஆ. கணேசன் &amp; திருமதி. முத்துமீனாள்</p>
+                <p class="parents-names en-only">Mr. A. Ganesan &amp; Mrs. Muthumeenal</p>
+              </div>
+
+              <div class="wing-contact-block">
+                <div class="person-loc">
+                  <span class="material-symbols-outlined">location_on</span>
+                  <span class="ta-only">இராஜகம்பீரம்</span>
+                  <span class="en-only">Rajagambeeram</span>
+                </div>
+                <a href="tel:+919500139345" class="person-call-btn">
+                  <span class="material-symbols-outlined">call</span> 95001 39345
+                </a>
+              </div>
+            </div>
+
+            <!-- SACRED SAREE-VESHTI KNOT & WEDS CENTERPIECE (IN CENTER OF GROOM & BRIDE CARDS) -->
+            <div class="pavilion-knot-centerpiece">
+              <div class="knot-vatti-icon">
+                <img src="assets/wedding-knot.png" alt="Sacred Saree-Veshti Wedding Knot" class="saree-vatti-img" />
+              </div>
+              <span class="grand-weds-text">weds</span>
+            </div>
+
+            <!-- BRIDE WING (மணமகள்) -->
+            <div class="pavilion-person-wing bride-wing">
+              <div class="wing-role-badge">
+                <span class="material-symbols-outlined">person_3</span>
+                <span class="ta-only">மணமகள்</span>
+                <span class="en-only">BRIDE</span>
+              </div>
+              
+              <h2 class="wing-name ta-only">கா. ஜீவிதா <span class="degree-tag">M.Sc.,</span></h2>
+              <h2 class="wing-name en-only">Ka. Jeevitha <span class="degree-tag">M.Sc.,</span></h2>
+              
+              <div class="wing-work-pill">
+                <span class="material-symbols-outlined">school</span>
+                <span>Post Graduate (M.Sc.)</span>
+              </div>
+
+              <div class="wing-divider"></div>
+
+              <div class="wing-parents-block">
+                <span class="parents-label ta-only">பெற்றோர் (d/o):</span>
+                <span class="parents-label en-only">Parents (d/o):</span>
+                <p class="parents-names ta-only">திரு. ஆ. காளிதாசன் &amp; திருமதி. பொன்னுத்தாய்</p>
+                <p class="parents-names en-only">Mr. A. Kalidhasan &amp; Mrs. Ponnuthai</p>
+              </div>
+
+              <div class="wing-contact-block">
+                <div class="person-loc">
+                  <span class="material-symbols-outlined">location_on</span>
+                  <span class="ta-only">சோமநாதபுரம் / பூவிளத்தூர், பரமக்குடி</span>
+                  <span class="en-only">Somanathapuram / Poovilathur, Paramakudi</span>
+                </div>
+                <div class="person-call-wrap">
+                  <a href="tel:+917397567933" class="person-call-btn">
+                    <span class="material-symbols-outlined">call</span> 73975 67933
+                  </a>
+                  <a href="tel:+919786403228" class="person-call-btn">
+                    <span class="material-symbols-outlined">call</span> 97864 03228
+                  </a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        </div>
+
+    </section>
+
+    <!-- ✦ Kanchipuram Zari Divider ✦ -->
+    <div class="zari-divider"></div>
+
+    <!-- ==========================================================================
+         INTERACTIVE GOLD GLITTER SCRATCH-TO-REVEAL CARD
+         ========================================================================== -->
+    <section class="section scratch-section" id="scratchSection">
+      
+      <div class="glass-card scratch-glass-card">
+        <!-- 4 Authentic SVG Gold Corner Ornaments -->
+        <div class="card-corners">
+          <div class="corner-ornament co-tl"><svg viewBox="0 0 44 44" width="34" height="34"><path d="M2 42 L2 14 Q2 2 14 2 L42 2" fill="none" stroke="#C8942A" stroke-width="2.2" stroke-linecap="round"/><path d="M7 42 L7 16 Q7 7 16 7 L42 7" fill="none" stroke="#E5B85C" stroke-width="1.2" stroke-linecap="round"/><circle cx="15" cy="15" r="3.5" fill="#C8942A"/><circle cx="15" cy="15" r="1.5" fill="#FFF2B8"/><circle cx="26" cy="11" r="2" fill="#C8942A"/><circle cx="11" cy="26" r="2" fill="#C8942A"/><path d="M15 11 Q15 4 22 7" fill="none" stroke="#C8942A" stroke-width="1.2"/><path d="M11 15 Q4 15 7 22" fill="none" stroke="#C8942A" stroke-width="1.2"/></svg></div>
+          <div class="corner-ornament co-tr"><svg viewBox="0 0 44 44" width="34" height="34" style="transform:scaleX(-1)"><path d="M2 42 L2 14 Q2 2 14 2 L42 2" fill="none" stroke="#C8942A" stroke-width="2.2" stroke-linecap="round"/><path d="M7 42 L7 16 Q7 7 16 7 L42 7" fill="none" stroke="#E5B85C" stroke-width="1.2" stroke-linecap="round"/><circle cx="15" cy="15" r="3.5" fill="#C8942A"/><circle cx="15" cy="15" r="1.5" fill="#FFF2B8"/><circle cx="26" cy="11" r="2" fill="#C8942A"/><circle cx="11" cy="26" r="2" fill="#C8942A"/><path d="M15 11 Q15 4 22 7" fill="none" stroke="#C8942A" stroke-width="1.2"/><path d="M11 15 Q4 15 7 22" fill="none" stroke="#C8942A" stroke-width="1.2"/></svg></div>
+          <div class="corner-ornament co-bl"><svg viewBox="0 0 44 44" width="34" height="34" style="transform:scaleY(-1)"><path d="M2 42 L2 14 Q2 2 14 2 L42 2" fill="none" stroke="#C8942A" stroke-width="2.2" stroke-linecap="round"/><path d="M7 42 L7 16 Q7 7 16 7 L42 7" fill="none" stroke="#E5B85C" stroke-width="1.2" stroke-linecap="round"/><circle cx="15" cy="15" r="3.5" fill="#C8942A"/><circle cx="15" cy="15" r="1.5" fill="#FFF2B8"/><circle cx="26" cy="11" r="2" fill="#C8942A"/><circle cx="11" cy="26" r="2" fill="#C8942A"/><path d="M15 11 Q15 4 22 7" fill="none" stroke="#C8942A" stroke-width="1.2"/><path d="M11 15 Q4 15 7 22" fill="none" stroke="#C8942A" stroke-width="1.2"/></svg></div>
+          <div class="corner-ornament co-br"><svg viewBox="0 0 44 44" width="34" height="34" style="transform:scale(-1)"><path d="M2 42 L2 14 Q2 2 14 2 L42 2" fill="none" stroke="#C8942A" stroke-width="2.2" stroke-linecap="round"/><path d="M7 42 L7 16 Q7 7 16 7 L42 7" fill="none" stroke="#E5B85C" stroke-width="1.2" stroke-linecap="round"/><circle cx="15" cy="15" r="3.5" fill="#C8942A"/><circle cx="15" cy="15" r="1.5" fill="#FFF2B8"/><circle cx="26" cy="11" r="2" fill="#C8942A"/><circle cx="11" cy="26" r="2" fill="#C8942A"/><path d="M15 11 Q15 4 22 7" fill="none" stroke="#C8942A" stroke-width="1.2"/><path d="M11 15 Q4 15 7 22" fill="none" stroke="#C8942A" stroke-width="1.2"/></svg></div>
+        </div>
+        
+        <div class="section-title-wrap">
+          <h3 class="section-sub-title ta-only">✨ திருமண நாள் ✨</h3>
+          <h3 class="section-sub-title en-only">✨ Wedding Date ✨</h3>
+          <p class="scratch-instruction-note ta-only">
+            <span class="material-symbols-outlined instruct-icon">touch_app</span> 
+            தேதியை அறிய விரலால் இங்கே கீறவும்
+          </p>
+          <p class="scratch-instruction-note en-only">
+            <span class="material-symbols-outlined instruct-icon">touch_app</span> 
+            Scratch here to see the wedding date
+          </p>
+        </div>
+
+        <!-- Scratch Card Arena -->
+        <div class="scratch-card-container" id="scratchCardContainer">
+          
+          <!-- Hidden Card Underneath (Revealed on Scratch) -->
+          <div class="scratch-revealed-content" id="scratchRevealedContent">
+            <div class="revealed-mandap-bg">
+              <img src="assets/date-mandap-bg.jpg" alt="Auspicious Wedding Mandap">
+            </div>
+            <div class="revealed-badge ta-only">சுப முகூர்த்த நாள்</div>
+            <div class="revealed-badge en-only">Auspicious Wedding Day</div>
+            
+            <div class="revealed-day-text ta-only">ஞாயிற்றுக்கிழமை</div>
+            <div class="revealed-day-text en-only">SUNDAY</div>
+            
+            <div class="revealed-big-date">15</div>
+            
+            <div class="revealed-month-year ta-only">நவம்பர் (ஐப்பசி 29) • 2026</div>
+            <div class="revealed-month-year en-only">NOVEMBER 2026</div>
+            
+            <div class="revealed-details-list">
+              <div class="revealed-detail-pill">
+                <span class="material-symbols-outlined pill-icon">schedule</span>
+                <span class="ta-only">காலை 6.05 - 7.25 மணிக்குள்</span>
+                <span class="en-only">6:05 AM to 7:25 AM</span>
+              </div>
+              <div class="revealed-detail-pill">
+                <span class="material-symbols-outlined pill-icon">wb_twilight</span>
+                <span class="ta-only">விருச்சிக லக்கினம் • உத்திராடம் நட்சத்திரம்</span>
+                <span class="en-only">Vrischika Lagnam • Uthiradam</span>
+              </div>
+              <div class="revealed-detail-pill venue-pill">
+                <span class="material-symbols-outlined pill-icon">location_on</span>
+                <span class="ta-only">ஸ்ரீ மீனாட்சி திருமண அரங்கம், பரமக்குடி</span>
+                <span class="en-only">Sri Meenakshi Wedding Hall, Paramakudi</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- HTML5 Canvas Covering Layer (Scratchable Gold Glitter) -->
+          <canvas id="scratchCanvas" width="380" height="420"></canvas>
+        </div>
+
+        <!-- Quick Reveal button -->
+        <div class="scratch-controls">
+          <button id="instantRevealBtn" class="instant-reveal-btn">
+            <span class="material-symbols-outlined btn-magic-icon">auto_awesome</span>
+            <span class="ta-only">முழுமையாக திறக்க</span>
+            <span class="en-only">Reveal All</span>
+          </button>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- ✦ Kanchipuram Zari Divider ✦ -->
+    <div class="zari-divider"></div>
+
+    <!-- ==========================================================================
+         WEDDING EVENTS & SCHEDULE WITH GOOGLE MAPS & CALENDAR
+         ========================================================================== -->
+    <section class="section events-section" id="eventsSection">
+      
+      <div class="section-title-wrap">
+        <div class="kolam-ornament">
+          <img src="assets/gopuram.svg" class="gopuram-icon" alt="Traditional Architecture">
+        </div>
+        <h2 class="section-title ta-only">திருமண வைபவங்கள்</h2>
+        <h2 class="section-title en-only">Wedding Events & Schedule</h2>
+        <p class="section-intro-text ta-only">அனைத்து சுப நிகழ்ச்சிகளிலும் தாங்கள் குடும்ப சகிதமாக கலந்து கொள்ள வேண்டுகிறோம்</p>
+        <p class="section-intro-text en-only">Join us in celebrating each cherished milestone of our joyous union</p>
+      </div>
+
+      <div class="events-grid-wrapper">
+        <!-- EVENT 1: MUHURTHAM -->
+        <div class="glass-card event-glass-card muhurtham-event-card">
+          <!-- 4 Authentic SVG Gold Corner Ornaments -->
+          <div class="card-corners">
+            <div class="corner-ornament co-tl"><svg viewBox="0 0 44 44" width="34" height="34"><path d="M2 42 L2 14 Q2 2 14 2 L42 2" fill="none" stroke="#C8942A" stroke-width="2.2" stroke-linecap="round"/><path d="M7 42 L7 16 Q7 7 16 7 L42 7" fill="none" stroke="#E5B85C" stroke-width="1.2" stroke-linecap="round"/><circle cx="15" cy="15" r="3.5" fill="#C8942A"/><circle cx="15" cy="15" r="1.5" fill="#FFF2B8"/><circle cx="26" cy="11" r="2" fill="#C8942A"/><circle cx="11" cy="26" r="2" fill="#C8942A"/><path d="M15 11 Q15 4 22 7" fill="none" stroke="#C8942A" stroke-width="1.2"/><path d="M11 15 Q4 15 7 22" fill="none" stroke="#C8942A" stroke-width="1.2"/></svg></div>
+            <div class="corner-ornament co-tr"><svg viewBox="0 0 44 44" width="34" height="34" style="transform:scaleX(-1)"><path d="M2 42 L2 14 Q2 2 14 2 L42 2" fill="none" stroke="#C8942A" stroke-width="2.2" stroke-linecap="round"/><path d="M7 42 L7 16 Q7 7 16 7 L42 7" fill="none" stroke="#E5B85C" stroke-width="1.2" stroke-linecap="round"/><circle cx="15" cy="15" r="3.5" fill="#C8942A"/><circle cx="15" cy="15" r="1.5" fill="#FFF2B8"/><circle cx="26" cy="11" r="2" fill="#C8942A"/><circle cx="11" cy="26" r="2" fill="#C8942A"/><path d="M15 11 Q15 4 22 7" fill="none" stroke="#C8942A" stroke-width="1.2"/><path d="M11 15 Q4 15 7 22" fill="none" stroke="#C8942A" stroke-width="1.2"/></svg></div>
+            <div class="corner-ornament co-bl"><svg viewBox="0 0 44 44" width="34" height="34" style="transform:scaleY(-1)"><path d="M2 42 L2 14 Q2 2 14 2 L42 2" fill="none" stroke="#C8942A" stroke-width="2.2" stroke-linecap="round"/><path d="M7 42 L7 16 Q7 7 16 7 L42 7" fill="none" stroke="#E5B85C" stroke-width="1.2" stroke-linecap="round"/><circle cx="15" cy="15" r="3.5" fill="#C8942A"/><circle cx="15" cy="15" r="1.5" fill="#FFF2B8"/><circle cx="26" cy="11" r="2" fill="#C8942A"/><circle cx="11" cy="26" r="2" fill="#C8942A"/><path d="M15 11 Q15 4 22 7" fill="none" stroke="#C8942A" stroke-width="1.2"/><path d="M11 15 Q4 15 7 22" fill="none" stroke="#C8942A" stroke-width="1.2"/></svg></div>
+            <div class="corner-ornament co-br"><svg viewBox="0 0 44 44" width="34" height="34" style="transform:scale(-1)"><path d="M2 42 L2 14 Q2 2 14 2 L42 2" fill="none" stroke="#C8942A" stroke-width="2.2" stroke-linecap="round"/><path d="M7 42 L7 16 Q7 7 16 7 L42 7" fill="none" stroke="#E5B85C" stroke-width="1.2" stroke-linecap="round"/><circle cx="15" cy="15" r="3.5" fill="#C8942A"/><circle cx="15" cy="15" r="1.5" fill="#FFF2B8"/><circle cx="26" cy="11" r="2" fill="#C8942A"/><circle cx="11" cy="26" r="2" fill="#C8942A"/><path d="M15 11 Q15 4 22 7" fill="none" stroke="#C8942A" stroke-width="1.2"/><path d="M11 15 Q4 15 7 22" fill="none" stroke="#C8942A" stroke-width="1.2"/></svg></div>
+          </div>
+          <div class="event-card-header">
+            <div class="event-type-badge">
+              <span class="material-symbols-outlined event-badge-icon">favorite</span>
+              <span class="ta-only">புனித சுப முகூர்த்தம்</span>
+              <span class="en-only">Holy Wedding Ceremony (Muhurtham)</span>
+            </div>
+            <div class="event-auspicious-tag ta-only">விருச்சிக லக்கினம் • உத்திராடம்</div>
+            <div class="event-auspicious-tag en-only">Auspicious Lagnam & Timing</div>
+          </div>
+
+          <div class="event-timing-row">
+            <div class="timing-badge">
+              <span class="material-symbols-outlined time-icon">calendar_month</span>
+              <span class="ta-only">15 நவம்பர் 2026 • ஞாயிறு</span>
+              <span class="en-only">Sunday, 15th November 2026</span>
+            </div>
+            <div class="timing-badge time-badge">
+              <span class="material-symbols-outlined time-icon">schedule</span>
+              <span class="ta-only">காலை 6.05 முதல் 7.25 மணிக்குள்</span>
+              <span class="en-only">6:05 AM to 7:25 AM IST</span>
+            </div>
+          </div>
+
+
+
+          <div class="event-venue-box">
+            <div class="venue-icon-wrapper">
+              <span class="material-symbols-outlined venue-google-icon">domain</span>
+            </div>
+            <div class="venue-info">
+              <h3 class="venue-name ta-only">ஸ்ரீ மீனாட்சி திருமண அரங்கம்</h3>
+              <h3 class="venue-name en-only">Sri Meenakshi Wedding Hall</h3>
+              <p class="venue-address ta-only">பரமக்குடி, இராமநாதபுரம் மாவட்டம், தமிழ்நாடு - 623707</p>
+              <p class="venue-address en-only">Paramakudi, Ramanathapuram District, Tamil Nadu - 623707</p>
+              <div class="venue-landmark">
+                <span class="material-symbols-outlined landmark-icon">info</span>
+                <span class="ta-only">பரமக்குடி நகரின் மையப்பகுதியில் அமைந்துள்ள பாரம்பரிய திருமண அரங்கம்</span>
+                <span class="en-only">Centrally located wedding venue in the heart of Paramakudi</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="event-action-buttons">
+            <a href="https://www.google.com/maps/search/?api=1&query=Sri+Meenakshi+Paramakudi" 
+               target="_blank" rel="noopener noreferrer" class="action-btn map-btn">
+              <span class="material-symbols-outlined btn-icon">navigation</span>
+              <span class="ta-only">வரைபடம் (Google Maps)</span>
+              <span class="en-only">Get Directions</span>
+            </a>
+            <button class="action-btn cal-btn" onclick="addToGoogleCalendar('muhurtham')">
+              <span class="material-symbols-outlined btn-icon">calendar_add_on</span>
+              <span class="ta-only">கேலெண்டரில் சேர்க்க</span>
+              <span class="en-only">Add to Calendar</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- EVENT 2: RECEPTION & VIRUNDHU -->
+        <div class="glass-card event-glass-card reception-event-card">
+          <!-- 4 Authentic SVG Gold Corner Ornaments -->
+          <div class="card-corners">
+            <div class="corner-ornament co-tl"><svg viewBox="0 0 44 44" width="34" height="34"><path d="M2 42 L2 14 Q2 2 14 2 L42 2" fill="none" stroke="#C8942A" stroke-width="2.2" stroke-linecap="round"/><path d="M7 42 L7 16 Q7 7 16 7 L42 7" fill="none" stroke="#E5B85C" stroke-width="1.2" stroke-linecap="round"/><circle cx="15" cy="15" r="3.5" fill="#C8942A"/><circle cx="15" cy="15" r="1.5" fill="#FFF2B8"/><circle cx="26" cy="11" r="2" fill="#C8942A"/><circle cx="11" cy="26" r="2" fill="#C8942A"/><path d="M15 11 Q15 4 22 7" fill="none" stroke="#C8942A" stroke-width="1.2"/><path d="M11 15 Q4 15 7 22" fill="none" stroke="#C8942A" stroke-width="1.2"/></svg></div>
+            <div class="corner-ornament co-tr"><svg viewBox="0 0 44 44" width="34" height="34" style="transform:scaleX(-1)"><path d="M2 42 L2 14 Q2 2 14 2 L42 2" fill="none" stroke="#C8942A" stroke-width="2.2" stroke-linecap="round"/><path d="M7 42 L7 16 Q7 7 16 7 L42 7" fill="none" stroke="#E5B85C" stroke-width="1.2" stroke-linecap="round"/><circle cx="15" cy="15" r="3.5" fill="#C8942A"/><circle cx="15" cy="15" r="1.5" fill="#FFF2B8"/><circle cx="26" cy="11" r="2" fill="#C8942A"/><circle cx="11" cy="26" r="2" fill="#C8942A"/><path d="M15 11 Q15 4 22 7" fill="none" stroke="#C8942A" stroke-width="1.2"/><path d="M11 15 Q4 15 7 22" fill="none" stroke="#C8942A" stroke-width="1.2"/></svg></div>
+            <div class="corner-ornament co-bl"><svg viewBox="0 0 44 44" width="34" height="34" style="transform:scaleY(-1)"><path d="M2 42 L2 14 Q2 2 14 2 L42 2" fill="none" stroke="#C8942A" stroke-width="2.2" stroke-linecap="round"/><path d="M7 42 L7 16 Q7 7 16 7 L42 7" fill="none" stroke="#E5B85C" stroke-width="1.2" stroke-linecap="round"/><circle cx="15" cy="15" r="3.5" fill="#C8942A"/><circle cx="15" cy="15" r="1.5" fill="#FFF2B8"/><circle cx="26" cy="11" r="2" fill="#C8942A"/><circle cx="11" cy="26" r="2" fill="#C8942A"/><path d="M15 11 Q15 4 22 7" fill="none" stroke="#C8942A" stroke-width="1.2"/><path d="M11 15 Q4 15 7 22" fill="none" stroke="#C8942A" stroke-width="1.2"/></svg></div>
+            <div class="corner-ornament co-br"><svg viewBox="0 0 44 44" width="34" height="34" style="transform:scale(-1)"><path d="M2 42 L2 14 Q2 2 14 2 L42 2" fill="none" stroke="#C8942A" stroke-width="2.2" stroke-linecap="round"/><path d="M7 42 L7 16 Q7 7 16 7 L42 7" fill="none" stroke="#E5B85C" stroke-width="1.2" stroke-linecap="round"/><circle cx="15" cy="15" r="3.5" fill="#C8942A"/><circle cx="15" cy="15" r="1.5" fill="#FFF2B8"/><circle cx="26" cy="11" r="2" fill="#C8942A"/><circle cx="11" cy="26" r="2" fill="#C8942A"/><path d="M15 11 Q15 4 22 7" fill="none" stroke="#C8942A" stroke-width="1.2"/><path d="M11 15 Q4 15 7 22" fill="none" stroke="#C8942A" stroke-width="1.2"/></svg></div>
+          </div>
+          <div class="event-card-header">
+            <div class="event-type-badge reception-badge">
+              <span class="material-symbols-outlined event-badge-icon">celebration</span>
+              <span class="ta-only">வரவேற்பு & திருமண விருந்து</span>
+              <span class="en-only">Reception & Grand Wedding Feast</span>
+            </div>
+            <div class="event-auspicious-tag ta-only">மங்கள விருந்து</div>
+            <div class="event-auspicious-tag en-only">Celebratory Feast</div>
+          </div>
+
+          <div class="event-timing-row">
+            <div class="timing-badge">
+              <span class="material-symbols-outlined time-icon">calendar_month</span>
+              <span class="ta-only">15 நவம்பர் 2026 • ஞாயிறு</span>
+              <span class="en-only">Sunday, 15th November 2026</span>
+            </div>
+            <div class="timing-badge time-badge">
+              <span class="material-symbols-outlined time-icon">restaurant</span>
+              <span class="ta-only">காலை 9.30 மணிக்கு மேல்</span>
+              <span class="en-only">9:30 AM Onwards</span>
+            </div>
+          </div>
+
+
+
+          <div class="event-venue-box">
+            <div class="venue-icon-wrapper mahal-icon">
+              <span class="material-symbols-outlined venue-google-icon">hotel</span>
+            </div>
+            <div class="venue-info">
+              <h3 class="venue-name ta-only">MGM மஹால் (MGM Mahal)</h3>
+              <h3 class="venue-name en-only">MGM Mahal</h3>
+              <p class="venue-address ta-only">காட்டுப்பரமக்குடி E.B. அலுவலகம் எதிரில், காட்டுப்பரமக்குடி, பரமக்குடி - 623707</p>
+              <p class="venue-address en-only">Opposite to E.B. Office, Kaattuparamakudi, Paramakudi - 623707</p>
+              <div class="venue-landmark">
+                <span class="material-symbols-outlined landmark-icon">info</span>
+                <span class="ta-only">காட்டுப்பரமக்குடி மின்சார வாரிய (E.B.) அலுவலகம் எதிரில் எளிதில் சென்றடையும் இடம்</span>
+                <span class="en-only">Conveniently located right opposite the Kaattuparamakudi TNEB Office</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="event-action-buttons">
+            <a href="https://www.google.com/maps/search/?api=1&query=MGM+Mahal+Kattuparamakudi+Paramakudi" 
+               target="_blank" rel="noopener noreferrer" class="action-btn map-btn">
+              <span class="material-symbols-outlined btn-icon">navigation</span>
+              <span class="ta-only">வரைபடம் (Google Maps)</span>
+              <span class="en-only">Get Directions</span>
+            </a>
+            <button class="action-btn cal-btn" onclick="addToGoogleCalendar('reception')">
+              <span class="material-symbols-outlined btn-icon">calendar_add_on</span>
+              <span class="ta-only">கேலெண்டரில் சேர்க்க</span>
+              <span class="en-only">Add to Calendar</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ✦ Kanchipuram Zari Divider ✦ -->
+    <div class="zari-divider"></div>
+
+    <!-- ==========================================================================
+         GUEST TRAVEL & LOGISTICS GUIDE
+         ========================================================================== -->
+    <section class="section travel-section" id="travelSection">
+      
+      <div class="glass-card travel-glass-card">
+        <!-- 4 Authentic SVG Gold Corner Ornaments -->
+        <div class="card-corners">
+          <div class="corner-ornament co-tl"><svg viewBox="0 0 44 44" width="34" height="34"><path d="M2 42 L2 14 Q2 2 14 2 L42 2" fill="none" stroke="#C8942A" stroke-width="2.2" stroke-linecap="round"/><path d="M7 42 L7 16 Q7 7 16 7 L42 7" fill="none" stroke="#E5B85C" stroke-width="1.2" stroke-linecap="round"/><circle cx="15" cy="15" r="3.5" fill="#C8942A"/><circle cx="15" cy="15" r="1.5" fill="#FFF2B8"/><circle cx="26" cy="11" r="2" fill="#C8942A"/><circle cx="11" cy="26" r="2" fill="#C8942A"/><path d="M15 11 Q15 4 22 7" fill="none" stroke="#C8942A" stroke-width="1.2"/><path d="M11 15 Q4 15 7 22" fill="none" stroke="#C8942A" stroke-width="1.2"/></svg></div>
+          <div class="corner-ornament co-tr"><svg viewBox="0 0 44 44" width="34" height="34" style="transform:scaleX(-1)"><path d="M2 42 L2 14 Q2 2 14 2 L42 2" fill="none" stroke="#C8942A" stroke-width="2.2" stroke-linecap="round"/><path d="M7 42 L7 16 Q7 7 16 7 L42 7" fill="none" stroke="#E5B85C" stroke-width="1.2" stroke-linecap="round"/><circle cx="15" cy="15" r="3.5" fill="#C8942A"/><circle cx="15" cy="15" r="1.5" fill="#FFF2B8"/><circle cx="26" cy="11" r="2" fill="#C8942A"/><circle cx="11" cy="26" r="2" fill="#C8942A"/><path d="M15 11 Q15 4 22 7" fill="none" stroke="#C8942A" stroke-width="1.2"/><path d="M11 15 Q4 15 7 22" fill="none" stroke="#C8942A" stroke-width="1.2"/></svg></div>
+          <div class="corner-ornament co-bl"><svg viewBox="0 0 44 44" width="34" height="34" style="transform:scaleY(-1)"><path d="M2 42 L2 14 Q2 2 14 2 L42 2" fill="none" stroke="#C8942A" stroke-width="2.2" stroke-linecap="round"/><path d="M7 42 L7 16 Q7 7 16 7 L42 7" fill="none" stroke="#E5B85C" stroke-width="1.2" stroke-linecap="round"/><circle cx="15" cy="15" r="3.5" fill="#C8942A"/><circle cx="15" cy="15" r="1.5" fill="#FFF2B8"/><circle cx="26" cy="11" r="2" fill="#C8942A"/><circle cx="11" cy="26" r="2" fill="#C8942A"/><path d="M15 11 Q15 4 22 7" fill="none" stroke="#C8942A" stroke-width="1.2"/><path d="M11 15 Q4 15 7 22" fill="none" stroke="#C8942A" stroke-width="1.2"/></svg></div>
+          <div class="corner-ornament co-br"><svg viewBox="0 0 44 44" width="34" height="34" style="transform:scale(-1)"><path d="M2 42 L2 14 Q2 2 14 2 L42 2" fill="none" stroke="#C8942A" stroke-width="2.2" stroke-linecap="round"/><path d="M7 42 L7 16 Q7 7 16 7 L42 7" fill="none" stroke="#E5B85C" stroke-width="1.2" stroke-linecap="round"/><circle cx="15" cy="15" r="3.5" fill="#C8942A"/><circle cx="15" cy="15" r="1.5" fill="#FFF2B8"/><circle cx="26" cy="11" r="2" fill="#C8942A"/><circle cx="11" cy="26" r="2" fill="#C8942A"/><path d="M15 11 Q15 4 22 7" fill="none" stroke="#C8942A" stroke-width="1.2"/><path d="M11 15 Q4 15 7 22" fill="none" stroke="#C8942A" stroke-width="1.2"/></svg></div>
+        </div>
+        
+        <div class="section-title-wrap">
+          <div class="kolam-ornament">
+            <span class="material-symbols-outlined gold-compass">explore</span>
+          </div>
+          <h2 class="section-title ta-only">விருந்தினர் பயண வழிகாட்டி</h2>
+          <h2 class="section-title en-only">Guest Travel & Transit Guide</h2>
+          <p class="section-intro-text ta-only">பரமக்குடிக்கு வருகை தரும் விருந்தினர்களுக்கான எளிதான போக்குவரத்து வழிகள்</p>
+          <p class="section-intro-text en-only">Smooth transit routes and connectivity details to reach Paramakudi</p>
+        </div>
+
+        <div class="transit-cards-grid">
+          <!-- Train Transit -->
+          <div class="transit-card">
+            <div class="transit-icon-circle train-circle">
+              <span class="material-symbols-outlined transit-main-icon">directions_railway</span>
+            </div>
+            <h3 class="transit-heading ta-only">ரயில் போக்குவரத்து</h3>
+            <h3 class="transit-heading en-only">By Train</h3>
+            <ul class="transit-points">
+              <li>
+                <strong>Paramakudi Station (PMK):</strong> 
+                <span class="ta-only">மண்டபத்திலிருந்து ~2.5 கி.மீ. சென்னை, மதுரை, ராமேஸ்வரம் மார்க்க ரயில்கள் நிற்கின்றன.</span>
+                <span class="en-only">~2.5 km from venues. Direct halts for Chennai, Madurai, Rameswaram express trains.</span>
+              </li>
+              <li>
+                <strong>Ramanathapuram (RMD):</strong> ~38 km
+              </li>
+              <li>
+                <strong>Madurai Junction (MDU):</strong> 
+                <span class="ta-only">~75 கி.மீ (முக்கிய ரயில் சந்திப்பு).</span>
+                <span class="en-only">~75 km (Major junction connected across India).</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Flight Transit -->
+          <div class="transit-card">
+            <div class="transit-icon-circle flight-circle">
+              <span class="material-symbols-outlined transit-main-icon">flight_takeoff</span>
+            </div>
+            <h3 class="transit-heading ta-only">விமான போக்குவரத்து</h3>
+            <h3 class="transit-heading en-only">By Flight</h3>
+            <ul class="transit-points">
+              <li>
+                <strong>Madurai Airport (IXM):</strong> 
+                <span class="ta-only">~70 கி.மீ தூரம். 4-வழி தேசிய நெடுஞ்சாலை (NH 87) வழியாக சுமார் 1 மணி 15 நிமிடப் பயணம்.</span>
+                <span class="en-only">~70 km away. Approx 1 hr 15 mins via 4-lane NH 87 highway.</span>
+              </li>
+              <li>
+                <span class="ta-only">சென்னை, பெங்களூரு, ஹைதராபாத், மும்பை நகரங்களிலிருந்து நேரடி விமானங்கள் உள்ளன.</span>
+                <span class="en-only">Daily direct flights from Chennai, Bengaluru, Hyderabad, Dubai & Colombo.</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Bus & Road Transit -->
+          <div class="transit-card">
+            <div class="transit-icon-circle bus-circle">
+              <span class="material-symbols-outlined transit-main-icon">directions_bus</span>
+            </div>
+            <h3 class="transit-heading ta-only">பேருந்து & சாலை வழி</h3>
+            <h3 class="transit-heading en-only">By Bus & Road</h3>
+            <ul class="transit-points">
+              <li>
+                <strong>Paramakudi Bus Stand:</strong>
+                <span class="ta-only">மதுரை (மாட்டுத்தாவணி), ராமநாதபுரம், சிவகங்கை, திருச்சியிலிருந்து ஒவ்வொரு 10 நிமிடங்களுக்கும் விரைவுப் பேருந்துகள்.</span>
+                <span class="en-only">Express buses every 10 mins from Madurai Mattuthavani, Ramanathapuram, Trichy.</span>
+              </li>
+              <li>
+                <strong>NH 87 Corridor:</strong>
+                <span class="ta-only">மதுரை ➔ மானாமதுரை ➔ பரமக்குடி (அருமையான 4-வழி விரைவுச் சாலை).</span>
+                <span class="en-only">Madurai ➔ Manamadurai ➔ Paramakudi (Smooth 4-lane driving route).</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- ✦ Kanchipuram Zari Divider ✦ -->
+    <div class="zari-divider"></div>
+
+    <!-- ==========================================================================
+         PLACES TO EXPLORE NEAR PARAMAKUDI (WITH AUTHENTIC REAL PHOTOS)
+         ========================================================================== -->
+    <section class="section attractions-section" id="attractionsSection">
+      
+      <div class="glass-card attractions-glass-card">
+        <!-- 4 Authentic SVG Gold Corner Ornaments -->
+        <div class="card-corners">
+          <div class="corner-ornament co-tl"><svg viewBox="0 0 44 44" width="34" height="34"><path d="M2 42 L2 14 Q2 2 14 2 L42 2" fill="none" stroke="#C8942A" stroke-width="2.2" stroke-linecap="round"/><path d="M7 42 L7 16 Q7 7 16 7 L42 7" fill="none" stroke="#E5B85C" stroke-width="1.2" stroke-linecap="round"/><circle cx="15" cy="15" r="3.5" fill="#C8942A"/><circle cx="15" cy="15" r="1.5" fill="#FFF2B8"/><circle cx="26" cy="11" r="2" fill="#C8942A"/><circle cx="11" cy="26" r="2" fill="#C8942A"/><path d="M15 11 Q15 4 22 7" fill="none" stroke="#C8942A" stroke-width="1.2"/><path d="M11 15 Q4 15 7 22" fill="none" stroke="#C8942A" stroke-width="1.2"/></svg></div>
+          <div class="corner-ornament co-tr"><svg viewBox="0 0 44 44" width="34" height="34" style="transform:scaleX(-1)"><path d="M2 42 L2 14 Q2 2 14 2 L42 2" fill="none" stroke="#C8942A" stroke-width="2.2" stroke-linecap="round"/><path d="M7 42 L7 16 Q7 7 16 7 L42 7" fill="none" stroke="#E5B85C" stroke-width="1.2" stroke-linecap="round"/><circle cx="15" cy="15" r="3.5" fill="#C8942A"/><circle cx="15" cy="15" r="1.5" fill="#FFF2B8"/><circle cx="26" cy="11" r="2" fill="#C8942A"/><circle cx="11" cy="26" r="2" fill="#C8942A"/><path d="M15 11 Q15 4 22 7" fill="none" stroke="#C8942A" stroke-width="1.2"/><path d="M11 15 Q4 15 7 22" fill="none" stroke="#C8942A" stroke-width="1.2"/></svg></div>
+          <div class="corner-ornament co-bl"><svg viewBox="0 0 44 44" width="34" height="34" style="transform:scaleY(-1)"><path d="M2 42 L2 14 Q2 2 14 2 L42 2" fill="none" stroke="#C8942A" stroke-width="2.2" stroke-linecap="round"/><path d="M7 42 L7 16 Q7 7 16 7 L42 7" fill="none" stroke="#E5B85C" stroke-width="1.2" stroke-linecap="round"/><circle cx="15" cy="15" r="3.5" fill="#C8942A"/><circle cx="15" cy="15" r="1.5" fill="#FFF2B8"/><circle cx="26" cy="11" r="2" fill="#C8942A"/><circle cx="11" cy="26" r="2" fill="#C8942A"/><path d="M15 11 Q15 4 22 7" fill="none" stroke="#C8942A" stroke-width="1.2"/><path d="M11 15 Q4 15 7 22" fill="none" stroke="#C8942A" stroke-width="1.2"/></svg></div>
+          <div class="corner-ornament co-br"><svg viewBox="0 0 44 44" width="34" height="34" style="transform:scale(-1)"><path d="M2 42 L2 14 Q2 2 14 2 L42 2" fill="none" stroke="#C8942A" stroke-width="2.2" stroke-linecap="round"/><path d="M7 42 L7 16 Q7 7 16 7 L42 7" fill="none" stroke="#E5B85C" stroke-width="1.2" stroke-linecap="round"/><circle cx="15" cy="15" r="3.5" fill="#C8942A"/><circle cx="15" cy="15" r="1.5" fill="#FFF2B8"/><circle cx="26" cy="11" r="2" fill="#C8942A"/><circle cx="11" cy="26" r="2" fill="#C8942A"/><path d="M15 11 Q15 4 22 7" fill="none" stroke="#C8942A" stroke-width="1.2"/><path d="M11 15 Q4 15 7 22" fill="none" stroke="#C8942A" stroke-width="1.2"/></svg></div>
+        </div>
+        
+        <div class="section-title-wrap">
+          <div class="kolam-ornament">
+            <span class="material-symbols-outlined gold-compass">map</span>
+          </div>
+          <h2 class="section-title ta-only">சுற்றுலா & வரலாற்றுத் தலங்கள்</h2>
+          <h2 class="section-title en-only">Places to Explore Near Paramakudi</h2>
+          <p class="section-intro-text ta-only">திருமணத்திற்கு வருகை தரும் தருணத்தில் நீங்கள் சுற்றிப் பார்க்கக்கூடிய வரலாற்று மற்றும் இயற்கை எழில் இடங்கள்</p>
+          <p class="section-intro-text en-only">Iconic architectural wonders and heritage attractions around Ramanathapuram & Madurai</p>
+        </div>
+
+        <!-- Carousel Container with Navigation Arrows -->
+        <div class="attractions-carousel-container">
+          <button class="carousel-arrow-btn prev-btn" id="placesPrevBtn" aria-label="Previous Attraction">
+            <span class="material-symbols-outlined">chevron_left</span>
+          </button>
+
+          <!-- Carousel with REAL Authentic Images -->
+          <div class="attractions-carousel" id="attractionsCarousel">
+            
+            <!-- Attraction 1: Rameswaram 1212 Pillar Corridor (REAL PHOTO) -->
+            <div class="attraction-card">
+              <div class="attraction-img-box">
+                <img src="assets/place-rameswaram.jpg" alt="Rameswaram Temple Corridor" class="attraction-real-img" loading="lazy">
+                <div class="attraction-badge">
+                  <span class="material-symbols-outlined badge-pin">location_on</span> ~85 km
+                </div>
+              </div>
+              <div class="attraction-body">
+                <h4 class="attraction-title ta-only">ராமேஸ்வரம் வரலாற்று தலம் & மூன்றாம் பிரகாரம்</h4>
+                <h4 class="attraction-title en-only">Rameswaram Heritage & 1212 Pillar Corridor</h4>
+                <p class="attraction-desc ta-only">
+                  ஆசியாவிலேயே மிக நீளமான 1212 பிரம்மாண்ட செதுக்கப்பட்ட கருங்கல் தூண்களைக் கொண்ட வரலாற்று மூன்றாம் பிரகாரம் மற்றும் கடல் தீர்த்தங்கள் நிறைந்த புகழ்பெற்ற தலம்.
+                </p>
+                <p class="attraction-desc en-only">
+                  World-renowned for Asia's longest sculpted granite corridor featuring 1,212 pillars and sacred coastal viewpoints.
+                </p>
+                <a href="https://www.google.com/maps/search/?api=1&query=Rameswaram+Tamilnadu" target="_blank" rel="noopener noreferrer" class="attraction-map-link">
+                  <span class="material-symbols-outlined link-icon">near_me</span>
+                  <span class="ta-only">வரைபடத்தில் காண்க</span>
+                  <span class="en-only">View on Map</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Attraction 2: Dhanushkodi Ocean Meeting (REAL PHOTO) -->
+            <div class="attraction-card">
+              <div class="attraction-img-box">
+                <img src="assets/place-dhanushkodi.jpg" alt="Dhanushkodi Beach and Ocean" class="attraction-real-img" loading="lazy">
+                <div class="attraction-badge">
+                  <span class="material-symbols-outlined badge-pin">water</span> ~105 km
+                </div>
+              </div>
+              <div class="attraction-body">
+                <h4 class="attraction-title ta-only">தனுஷ்கோடி & அரிச்சல் முனை</h4>
+                <h4 class="attraction-title en-only">Dhanushkodi & Arichal Munai</h4>
+                <p class="attraction-desc ta-only">
+                  இந்தியாவின் கடைசி நில முனை. வங்காள விரிகுடாவும் இந்தியப் பெருங்கடலும் சங்கமிக்கும் இயற்கை எழில் கொஞ்சும் அரிச்சல் முனை மற்றும் வரலாற்று கடற்கரை.
+                </p>
+                <p class="attraction-desc en-only">
+                  The mesmerizing last tip of India where the Bay of Bengal meets the Indian Ocean. Scenic coastal drive, historic church ruins, and coastal viewpoints.
+                </p>
+                <a href="https://www.google.com/maps/search/?api=1&query=Arichal+Munai+Dhanushkodi" target="_blank" rel="noopener noreferrer" class="attraction-map-link">
+                  <span class="material-symbols-outlined link-icon">near_me</span>
+                  <span class="ta-only">வரைபடத்தில் காண்க</span>
+                  <span class="en-only">View on Map</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Attraction 3: Dr. APJ Abdul Kalam National Memorial (REAL PHOTO) -->
+            <div class="attraction-card">
+              <div class="attraction-img-box">
+                <img src="assets/place-kalam-memorial.jpg" alt="Dr. APJ Abdul Kalam National Memorial" class="attraction-real-img" loading="lazy">
+                <div class="attraction-badge">
+                  <span class="material-symbols-outlined badge-pin">rocket_launch</span> ~80 km
+                </div>
+              </div>
+              <div class="attraction-body">
+                <h4 class="attraction-title ta-only">டாக்டர் ஏ.பி.ஜே அப்துல் கலாம் தேசிய நினைவகம்</h4>
+                <h4 class="attraction-title en-only">Dr. APJ Abdul Kalam Memorial</h4>
+                <p class="attraction-desc ta-only">
+                  பேக்கரும்பில் டி.ஆர்.டி.ஓ (DRDO) நிறுவனத்தால் கட்டப்பட்ட இந்தியாவின் மக்கள் ஜனாதிபதி டாக்டர் அப்துல் கலாம் அவர்களின் பிரம்மாண்ட தேசிய நினைவகம், ராக்கெட் மாதிரிகள் மற்றும் அருங்காட்சியகம்.
+                </p>
+                <p class="attraction-desc en-only">
+                  Magnificent national memorial built by DRDO in Peikarumbu honoring the People's President Dr. APJ Abdul Kalam with rocket replicas, rare photographs, and his life journey.
+                </p>
+                <a href="https://www.google.com/maps/search/?api=1&query=Dr+APJ+Abdul+Kalam+Memorial+Peikarumbu" target="_blank" rel="noopener noreferrer" class="attraction-map-link">
+                  <span class="material-symbols-outlined link-icon">near_me</span>
+                  <span class="ta-only">வரைபடத்தில் காண்க</span>
+                  <span class="en-only">View on Map</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Attraction 4: Madurai Dravidian Heritage & 1000 Pillars (REAL PHOTO) -->
+            <div class="attraction-card">
+              <div class="attraction-img-box">
+                <img src="assets/place-madurai.jpg" alt="Madurai Meenakshi Temple Architecture" class="attraction-real-img" loading="lazy">
+                <div class="attraction-badge">
+                  <span class="material-symbols-outlined badge-pin">domain</span> ~75 km
+                </div>
+              </div>
+              <div class="attraction-body">
+                <h4 class="attraction-title ta-only">மதுரை வரலாற்று கட்டிடக்கலை & ஆயிரங்கால் மண்டபம்</h4>
+                <h4 class="attraction-title en-only">Madurai Heritage & Hall of Thousand Pillars</h4>
+                <p class="attraction-desc ta-only">
+                  திராவிடக் கட்டிடக்கலையின் உச்சம். 14 உயரமான வரலாற்று கோபுரங்கள், ஆயிரங்கால் மண்டபம் மற்றும் பொற்றாமரைக் குளம் கொண்ட உலகப் புகழ்பெற்ற வரலாற்று பண்பாட்டு தலம்.
+                </p>
+                <p class="attraction-desc en-only">
+                  World-renowned Dravidian architectural wonder with 14 towering gopurams adorned with thousands of colorful sculpted artwork, Hall of Thousand Pillars, and Golden Lotus tank.
+                </p>
+                <a href="https://www.google.com/maps/search/?api=1&query=Madurai+Tamil+Nadu" target="_blank" rel="noopener noreferrer" class="attraction-map-link">
+                  <span class="material-symbols-outlined link-icon">near_me</span>
+                  <span class="ta-only">வரைபடத்தில் காண்க</span>
+                  <span class="en-only">View on Map</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Attraction 5: Sethupathi Palace Ramanathapuram (REAL PHOTO) -->
+            <div class="attraction-card">
+              <div class="attraction-img-box">
+                <img src="assets/place-palace.jpg" alt="Sethupathi Palace Ramanathapuram" class="attraction-real-img" loading="lazy">
+                <div class="attraction-badge">
+                  <span class="material-symbols-outlined badge-pin">castle</span> ~38 km
+                </div>
+              </div>
+              <div class="attraction-body">
+                <h4 class="attraction-title ta-only">சேதுபதி அரண்மனை (இராமலிங்க விலாசம்)</h4>
+                <h4 class="attraction-title en-only">Sethupathi Palace (Ramalinga Vilasam)</h4>
+                <p class="attraction-desc ta-only">
+                  17 ஆம் நூற்றாண்டில் ராமநாதபுர சேதுபதி மன்னர்களால் கட்டப்பட்ட வரலாற்று அரண்மனை. 300 ஆண்டுகள் பழமையான அற்புத சுவரோவியங்கள் மற்றும் ராஜ தர்பார் மண்டபம்.
+                </p>
+                <p class="attraction-desc en-only">
+                  17th-century heritage palace of the Ramanathapuram Sethupathi Rajas featuring intricate Durbar hall and breathtaking 300-year-old mural paintings.
+                </p>
+                <a href="https://www.google.com/maps/search/?api=1&query=Ramalinga+Vilasam+Palace+Ramanathapuram" target="_blank" rel="noopener noreferrer" class="attraction-map-link">
+                  <span class="material-symbols-outlined link-icon">near_me</span>
+                  <span class="ta-only">வரைபடத்தில் காண்க</span>
+                  <span class="en-only">View on Map</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Attraction 6: Iconic Pamban Cantilever Sea Bridge (REAL PHOTO) -->
+            <div class="attraction-card">
+              <div class="attraction-img-box">
+                <img src="assets/place-pamban.jpg" alt="Pamban Sea Bridge Rameswaram" class="attraction-real-img" loading="lazy">
+                <div class="attraction-badge">
+                  <span class="material-symbols-outlined badge-pin">directions_transit</span> ~75 km
+                </div>
+              </div>
+              <div class="attraction-body">
+                <h4 class="attraction-title ta-only">பாம்பன் கடல் ரயில் பாலம்</h4>
+                <h4 class="attraction-title en-only">Pamban Sea Bridge</h4>
+                <p class="attraction-desc ta-only">
+                  நீலக் கடலின் மீது அமைந்த இந்தியாவின் முதல் கடல் ரயில் பாலம். கப்பல்கள் கடந்து செல்ல நடுவே திறக்கும் பொறியியல் அதிசயம் மற்றும் அதிநவீன புதிய செங்குத்து பாலம்.
+                </p>
+                <p class="attraction-desc en-only">
+                  India's first sea bridge spanning over 2 km across the azure ocean with an iconic central rolling lift span that opens up for marine vessels.
+                </p>
+                <a href="https://www.google.com/maps/search/?api=1&query=Pamban+Bridge+Rameswaram" target="_blank" rel="noopener noreferrer" class="attraction-map-link">
+                  <span class="material-symbols-outlined link-icon">near_me</span>
+                  <span class="ta-only">வரைபடத்தில் காண்க</span>
+                  <span class="en-only">View on Map</span>
+                </a>
+              </div>
+            </div>
+
+          </div>
+
+          <button class="carousel-arrow-btn next-btn" id="placesNextBtn" aria-label="Next Attraction">
+            <span class="material-symbols-outlined">chevron_right</span>
+          </button>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- ✦ Kanchipuram Zari Divider ✦ -->
+    <div class="zari-divider"></div>
+
+    <!-- ==========================================================================
+         COMPLIMENTS FOOTER (MATCHING WEBSITE GLASS THEME - NO RED BACKGROUND)
+         ========================================================================== -->
+    <section class="section footer-section" id="footerSection">
+      <footer class="wedding-footer glass-footer">
+        <div class="footer-garland">
+          <span class="material-symbols-outlined fg-icon" style="color:#d4af37">local_florist</span>
+          <span class="material-symbols-outlined fg-icon" style="color:#2d6a4f">eco</span>
+          <span class="material-symbols-outlined fg-icon" style="color:#d4af37">local_florist</span>
+          <span class="material-symbols-outlined fg-icon" style="color:#ffd54f">favorite</span>
+          <span class="material-symbols-outlined fg-icon" style="color:#d4af37">local_florist</span>
+          <span class="material-symbols-outlined fg-icon" style="color:#2d6a4f">eco</span>
+          <span class="material-symbols-outlined fg-icon" style="color:#d4af37">local_florist</span>
+        </div>
+        <div class="footer-body">
+          <h3 class="footer-names">Vignesh &amp; Jeevitha</h3>
+          <p class="footer-date ta-only">15 நவம்பர் 2026 &nbsp;·&nbsp; ஸ்ரீ மீனாட்சி திருமண அரங்கம் &nbsp;·&nbsp; பரமக்குடி</p>
+          <p class="footer-date en-only">November 15, 2026 &nbsp;·&nbsp; Sri Meenakshi Wedding Hall &nbsp;·&nbsp; Paramakudi</p>
+          <p class="footer-quote ta-only">"இரு மனம் இணையும் இனிய பயணம். அன்பும் நல்வாழ்த்துகளும்."</p>
+          <p class="footer-quote en-only">"Two souls, one journey. With love &amp; eternal blessings."</p>
+          <div class="footer-icons">
+            <span class="material-symbols-outlined" style="color:#ffd54f;font-size:1.5rem">favorite</span>
+            <span class="material-symbols-outlined" style="color:#d4af37;font-size:1.5rem">spa</span>
+            <span class="material-symbols-outlined" style="color:#ffd54f;font-size:1.5rem">favorite</span>
+          </div>
+        </div>
+      </footer>
+    </section>
+
+  </main>
+
+  <!-- FLOATING BACK TO TOP BUTTON -->
+  <button id="backToTopBtn" class="back-to-top" aria-label="Back to Top">
+    <span class="material-symbols-outlined">arrow_upward</span>
+  </button>
+
+  <script src="script.js?v=20261102_24"></script>
+</body>
+</html>

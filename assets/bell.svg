@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 120" fill="none">
+  <defs>
+    <linearGradient id="goldBell" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#8B6914" />
+      <stop offset="25%" stop-color="#FFD54F" />
+      <stop offset="50%" stop-color="#FFF59D" />
+      <stop offset="75%" stop-color="#FFCA28" />
+      <stop offset="100%" stop-color="#8B6914" />
+    </linearGradient>
+  </defs>
+
+  <!-- Hanging Brass Chain Links -->
+  <g stroke="url(#goldBell)" stroke-width="2" fill="none">
+    <ellipse cx="30" cy="8" rx="3.5" ry="5.5" />
+    <ellipse cx="30" cy="18" rx="3.5" ry="5.5" />
+    <ellipse cx="30" cy="28" rx="3.5" ry="5.5" />
+    <ellipse cx="30" cy="38" rx="3.5" ry="5.5" />
+    <ellipse cx="30" cy="48" rx="3.5" ry="5.5" />
+  </g>
+
+  <!-- Bell Crown / Top Ring -->
+  <ellipse cx="30" cy="56" rx="6" ry="3" fill="url(#goldBell)" />
+  <circle cx="30" cy="55" r="3" fill="#FFE082" />
+
+  <!-- Bell Body Dome -->
+  <path d="M24 58 C24 68 14 84 12 92 C11 96 15 98 30 98 C45 98 49 96 48 92 C46 84 36 68 36 58 Z" fill="url(#goldBell)" stroke="#6A4E00" stroke-width="1" />
+
+  <!-- Bell Decorative Engraved Bands -->
+  <path d="M22 70 Q30 73 38 70" stroke="#6A4E00" stroke-width="1.2" fill="none" />
+  <path d="M18 80 Q30 84 42 80" stroke="#6A4E00" stroke-width="1.2" fill="none" />
+  <path d="M14 90 Q30 94 46 90" stroke="#6A4E00" stroke-width="1.2" fill="none" />
+
+  <!-- Bell Flare Lip Rim -->
+  <ellipse cx="30" cy="98" rx="19" ry="5" fill="url(#goldBell)" stroke="#6A4E00" stroke-width="1.2" />
+
+  <!-- Hanging Clapper (Bell Tongue / நாக்கு) with Pearl Droplet -->
+  <line x1="30" y1="98" x2="30" y2="108" stroke="url(#goldBell)" stroke-width="2.5" />
+  <circle cx="30" cy="111" r="4.5" fill="url(#goldBell)" stroke="#6A4E00" stroke-width="0.8" />
+  <circle cx="30" cy="110" r="1.5" fill="#FFF" />
+</svg>
+

@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 120" fill="none">
+  <defs>
+    <linearGradient id="goldKalasam" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFE082" />
+      <stop offset="40%" stop-color="#FFCA28" />
+      <stop offset="80%" stop-color="#D4AF37" />
+      <stop offset="100%" stop-color="#8B6914" />
+    </linearGradient>
+    <linearGradient id="leafGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#4CAF50" />
+      <stop offset="100%" stop-color="#1B5E20" />
+    </linearGradient>
+    <radialGradient id="coconutGrad" cx="40%" cy="30%" r="60%">
+      <stop offset="0%" stop-color="#8D6E63" />
+      <stop offset="70%" stop-color="#5D4037" />
+      <stop offset="100%" stop-color="#3E2723" />
+    </radialGradient>
+  </defs>
+
+  <!-- Mango Leaves (மாவிலை) -->
+  <!-- Left Outer Leaf -->
+  <path d="M50 56 C32 46 22 30 20 16 C30 26 42 42 50 56 Z" fill="url(#leafGrad)" stroke="#1B5E20" stroke-width="0.5" />
+  <!-- Left Inner Leaf -->
+  <path d="M50 56 C36 40 32 24 34 10 C42 24 46 42 50 56 Z" fill="url(#leafGrad)" stroke="#1B5E20" stroke-width="0.5" />
+  <!-- Center Top Leaf -->
+  <path d="M50 56 C44 34 46 16 50 4 C54 16 56 34 50 56 Z" fill="url(#leafGrad)" stroke="#1B5E20" stroke-width="0.5" />
+  <!-- Right Inner Leaf -->
+  <path d="M50 56 C54 42 58 24 66 10 C68 24 64 40 50 56 Z" fill="url(#leafGrad)" stroke="#1B5E20" stroke-width="0.5" />
+  <!-- Right Outer Leaf -->
+  <path d="M50 56 C58 42 70 26 80 16 C78 30 68 46 50 56 Z" fill="url(#leafGrad)" stroke="#1B5E20" stroke-width="0.5" />
+
+  <!-- Coconut (தேங்காய்) -->
+  <ellipse cx="50" cy="38" rx="16" ry="18" fill="url(#coconutGrad)" stroke="#3E2723" stroke-width="1" />
+  <!-- Coconut husk tip / sacred tuft (குடுமி) -->
+  <path d="M46 20 C48 10 52 10 54 20 Z" fill="#4E342E" />
+  <!-- Sacred Chandanam & Kumkum Tilak on Coconut -->
+  <rect x="42" y="32" width="16" height="4" rx="2" fill="#FFE082" />
+  <circle cx="50" cy="34" r="2" fill="#D32F2F" />
+
+  <!-- Kalasam Brass Pot (செம்பு/கலசம்) -->
+  <!-- Pot Rim / Neck -->
+  <ellipse cx="50" cy="54" rx="18" ry="4" fill="url(#goldKalasam)" stroke="#6A4E00" stroke-width="1" />
+  <path d="M38 56 C38 60 40 64 36 68 C28 76 26 94 36 104 C42 110 58 110 64 104 C74 94 72 76 64 68 C60 64 62 60 62 56 Z" fill="url(#goldKalasam)" stroke="#6A4E00" stroke-width="1.2" />
+
+  <!-- Pot Decorative Thread / Sacred Nool markings -->
+  <path d="M34 80 Q50 86 66 80" stroke="#D32F2F" stroke-width="1.8" fill="none" />
+  <path d="M32 88 Q50 95 68 88" stroke="#D32F2F" stroke-width="1.8" fill="none" />
+  <path d="M36 96 Q50 102 64 96" stroke="#D32F2F" stroke-width="1.8" fill="none" />
+
+  <!-- Traditional Swastik / Om symbol on pot -->
+  <circle cx="50" cy="80" r="5" fill="#FFE082" stroke="#B8860B" stroke-width="0.8" />
+  <circle cx="50" cy="80" r="2" fill="#D32F2F" />
+
+  <!-- Pot Base Ring -->
+  <ellipse cx="50" cy="107" rx="14" ry="3" fill="url(#goldKalasam)" stroke="#6A4E00" stroke-width="1" />
+</svg>
+

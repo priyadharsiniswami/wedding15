@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 220" fill="none">
+  <defs>
+    <linearGradient id="goldLamp" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#8B6914" />
+      <stop offset="30%" stop-color="#FFD54F" />
+      <stop offset="50%" stop-color="#FFF59D" />
+      <stop offset="70%" stop-color="#FFCA28" />
+      <stop offset="100%" stop-color="#8B6914" />
+    </linearGradient>
+    <radialGradient id="flameGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFF9C4" />
+      <stop offset="30%" stop-color="#FFD54F" />
+      <stop offset="70%" stop-color="#FF6F00" />
+      <stop offset="100%" stop-color="#FF3D00" stop-opacity="0" />
+    </radialGradient>
+    <linearGradient id="flameGrad" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#FF5722" />
+      <stop offset="60%" stop-color="#FFB300" />
+      <stop offset="100%" stop-color="#FFF9C4" />
+    </linearGradient>
+  </defs>
+
+  <!-- Top Finial / Annam Bird or Crown Stupi -->
+  <path d="M40 18 C36 12 38 4 40 2 C42 4 44 12 40 18 Z" fill="url(#goldLamp)" stroke="#6A4E00" stroke-width="0.5" />
+  <ellipse cx="40" cy="20" rx="6" ry="3" fill="url(#goldLamp)" />
+
+  <!-- Center Top Flame (தீபம்) -->
+  <circle cx="40" cy="10" r="10" fill="url(#flameGlow)" opacity="0.6" />
+  <path d="M40 2 C37 8 36 12 40 15 C44 12 43 8 40 2 Z" fill="url(#flameGrad)">
+    <animate attributeName="d" 
+      values="M40 2 C37 8 36 12 40 15 C44 12 43 8 40 2 Z;
+              M40 1 C36 7 37 12 40 15 C43 12 44 7 40 1 Z;
+              M40 2 C37 8 36 12 40 15 C44 12 43 8 40 2 Z" 
+      dur="0.8s" repeatCount="indefinite" />
+  </path>
+
+  <!-- Side Flames (Left & Right) -->
+  <path d="M22 28 C20 32 19 35 22 37 C25 35 24 32 22 28 Z" fill="url(#flameGrad)">
+    <animate attributeName="opacity" values="0.8;1;0.8" dur="0.6s" repeatCount="indefinite" />
+  </path>
+  <path d="M58 28 C56 32 55 35 58 37 C61 35 60 32 58 28 Z" fill="url(#flameGrad)">
+    <animate attributeName="opacity" values="1;0.8;1" dur="0.7s" repeatCount="indefinite" />
+  </path>
+
+  <!-- Upper Oil Bowl (தகழி / 5 Wick Spouts) -->
+  <path d="M16 38 C20 44 32 46 40 46 C48 46 60 44 64 38 L60 34 C50 36 44 36 40 36 C36 36 30 36 20 34 Z" fill="url(#goldLamp)" stroke="#6A4E00" stroke-width="0.8" />
+  <!-- Bowl Rim -->
+  <ellipse cx="40" cy="36" rx="24" ry="4" fill="url(#goldLamp)" stroke="#6A4E00" stroke-width="0.8" />
+
+  <!-- Upper Neck & Moldings -->
+  <rect x="36" y="46" width="8" height="8" rx="1" fill="url(#goldLamp)" stroke="#6A4E00" stroke-width="0.5" />
+  <ellipse cx="40" cy="54" rx="10" ry="3" fill="url(#goldLamp)" />
+
+  <!-- Slender Fluted Pillar Shaft (தண்டு) -->
+  <path d="M37 54 L35 150 L45 150 L43 54 Z" fill="url(#goldLamp)" stroke="#6A4E00" stroke-width="0.8" />
+  <!-- Fluting lines on pillar -->
+  <line x1="39" y1="56" x2="38" y2="148" stroke="#FFE082" stroke-width="0.8" />
+  <line x1="41" y1="56" x2="42" y2="148" stroke="#FFE082" stroke-width="0.8" />
+
+  <!-- Middle Decorative Rings / Knops -->
+  <ellipse cx="40" cy="85" rx="8" ry="3" fill="url(#goldLamp)" />
+  <ellipse cx="40" cy="118" rx="8" ry="3" fill="url(#goldLamp)" />
+
+  <!-- Lower Base Transition / Lotus Pedestal (கீழ்ப் பீடம்) -->
+  <ellipse cx="40" cy="150" rx="12" ry="4" fill="url(#goldLamp)" />
+  <path d="M34 150 C30 162 20 180 14 195 C24 198 40 200 66 195 C60 180 50 162 46 150 Z" fill="url(#goldLamp)" stroke="#6A4E00" stroke-width="1" />
+
+  <!-- Tiered Heavy Bell Base (ஆமைப்பீடம் / அடித்தட்டு) -->
+  <ellipse cx="40" cy="195" rx="30" ry="6" fill="url(#goldLamp)" stroke="#6A4E00" stroke-width="1" />
+  <path d="M10 195 L8 206 C20 215 60 215 72 206 L70 195 Z" fill="url(#goldLamp)" stroke="#6A4E00" stroke-width="1" />
+  <ellipse cx="40" cy="206" rx="32" ry="7" fill="url(#goldLamp)" stroke="#6A4E00" stroke-width="1.2" />
+</svg>
+

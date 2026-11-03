@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 80" fill="none">
+  <defs>
+    <linearGradient id="goldThali" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFF59D" />
+      <stop offset="30%" stop-color="#FFD54F" />
+      <stop offset="70%" stop-color="#FFC107" />
+      <stop offset="100%" stop-color="#B8860B" />
+    </linearGradient>
+    <linearGradient id="manjalCord" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FFB300" />
+      <stop offset="50%" stop-color="#FFF176" />
+      <stop offset="100%" stop-color="#FFB300" />
+    </linearGradient>
+  </defs>
+
+  <!-- Sacred Yellow Turmeric Cord (மஞ்சள் கயிறு) -->
+  <path d="M10 20 C30 50 70 50 90 20" stroke="url(#manjalCord)" stroke-width="3" stroke-linecap="round" fill="none" />
+  
+  <!-- The Three Auspicious Knots (மூன்று முடிச்சுகள்) -->
+  <circle cx="42" cy="42" r="3" fill="#E65100" stroke="#FFD54F" stroke-width="0.8" />
+  <circle cx="50" cy="44" r="3.5" fill="#E65100" stroke="#FFD54F" stroke-width="0.8" />
+  <circle cx="58" cy="42" r="3" fill="#E65100" stroke="#FFD54F" stroke-width="0.8" />
+
+  <!-- Center Golden Thali / Mangalyam Pendant -->
+  <path d="M44 48 C44 48 42 62 50 70 C58 62 56 48 56 48 Z" fill="url(#goldThali)" stroke="#8B6914" stroke-width="1" />
+  
+  <!-- Shivling / Tilak engraving on Thali -->
+  <circle cx="50" cy="56" r="2.5" fill="#D32F2F" />
+  <path d="M47 62 Q50 64 53 62" stroke="#8B6914" stroke-width="1" fill="none" />
+  
+  <!-- Kasu / Lakshmi Coins on sides -->
+  <circle cx="34" cy="38" r="4.5" fill="url(#goldThali)" stroke="#8B6914" stroke-width="0.8" />
+  <circle cx="66" cy="38" r="4.5" fill="url(#goldThali)" stroke="#8B6914" stroke-width="0.8" />
+</svg>
+

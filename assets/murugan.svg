@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <defs>
+    <linearGradient id="goldMurugan" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFE082" />
+      <stop offset="50%" stop-color="#FFD54F" />
+      <stop offset="100%" stop-color="#B8860B" />
+    </linearGradient>
+    <radialGradient id="haloMurugan" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFF9C4" stop-opacity="0.9" />
+      <stop offset="80%" stop-color="#FFD54F" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#B8860B" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+  <circle cx="50" cy="50" r="48" fill="url(#haloMurugan)" />
+  <circle cx="50" cy="50" r="46" stroke="url(#goldMurugan)" stroke-width="1.5" stroke-dasharray="3 2" fill="rgba(122, 16, 22, 0.4)" />
+  <circle cx="50" cy="50" r="42" stroke="url(#goldMurugan)" stroke-width="1" fill="none" />
+  
+  <!-- Divine Vel (வேல்) -->
+  <!-- Vel Blade -->
+  <path d="M50 14 C44 24 38 34 40 44 C42 50 48 52 50 54 C52 52 58 50 60 44 C62 34 56 24 50 14 Z" fill="url(#goldMurugan)" stroke="#8B6914" stroke-width="0.8" />
+  
+  <!-- Vel Central Spine & Sacred Marks -->
+  <line x1="50" y1="18" x2="50" y2="52" stroke="#FFF8E1" stroke-width="1.5" stroke-linecap="round" />
+  <line x1="45" y1="36" x2="55" y2="36" stroke="#FFF" stroke-width="1.2" />
+  <circle cx="50" cy="36" r="1.5" fill="#D32F2F" />
+  <circle cx="50" cy="26" r="1.8" fill="#FF5722" />
+
+  <!-- Vel Base Ornaments -->
+  <path d="M44 54 C46 56 54 56 56 54 L54 58 L46 58 Z" fill="url(#goldMurugan)" />
+
+  <!-- Vel Shaft / Staff -->
+  <line x1="50" y1="58" x2="50" y2="82" stroke="url(#goldMurugan)" stroke-width="3" stroke-linecap="round" />
+  <circle cx="50" cy="83" r="2.5" fill="url(#goldMurugan)" />
+  
+  <!-- Peacock Feather (Mayil Thogai) accent -->
+  <path d="M28 62 C26 48 34 38 42 36 C34 44 32 54 34 66 Z" fill="#2E7D32" opacity="0.8" />
+  <circle cx="34" cy="46" r="3.5" fill="#1565C0" />
+  <circle cx="34" cy="46" r="1.8" fill="#FFD54F" />
+  <path d="M72 62 C74 48 66 38 58 36 C66 44 68 54 66 66 Z" fill="#2E7D32" opacity="0.8" />
+  <circle cx="66" cy="46" r="3.5" fill="#1565C0" />
+  <circle cx="66" cy="46" r="1.8" fill="#FFD54F" />
+
+  <!-- Lotus base pedestal -->
+  <path d="M30 84 C40 80 60 80 70 84 C62 88 38 88 30 84 Z" fill="url(#goldMurugan)" opacity="0.8" />
+  <path d="M36 84 Q50 78 64 84" stroke="#FFE082" stroke-width="1.5" fill="none" />
+</svg>
+

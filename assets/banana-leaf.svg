@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 300" fill="none">
+  <defs>
+    <linearGradient id="bananaGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7CB342" />
+      <stop offset="50%" stop-color="#43A047" />
+      <stop offset="100%" stop-color="#1B5E20" />
+    </linearGradient>
+  </defs>
+  <!-- Main Leaf Body -->
+  <path d="M60 10 C20 40 10 120 15 200 C20 250 45 285 60 295 C75 285 100 250 105 200 C110 120 100 40 60 10 Z" fill="url(#bananaGrad)" />
+  
+  <!-- Central Vein / Midrib (ஈர்க்கு) -->
+  <path d="M60 10 L60 295" stroke="#C8E6C9" stroke-width="3" stroke-linecap="round" />
+  
+  <!-- Lateral Veins -->
+  <g stroke="#A5D6A7" stroke-width="1.2" opacity="0.75">
+    <path d="M60 40 Q40 50 25 55" />
+    <path d="M60 40 Q80 50 95 55" />
+    <path d="M60 70 Q35 85 20 95" />
+    <path d="M60 70 Q85 85 100 95" />
+    <path d="M60 105 Q30 125 16 135" />
+    <path d="M60 105 Q90 125 104 135" />
+    <path d="M60 145 Q28 170 14 185" />
+    <path d="M60 145 Q92 170 106 185" />
+    <path d="M60 185 Q30 210 16 225" />
+    <path d="M60 185 Q90 210 104 225" />
+    <path d="M60 225 Q35 248 24 260" />
+    <path d="M60 225 Q85 248 96 260" />
+    <path d="M60 260 Q45 275 36 285" />
+    <path d="M60 260 Q75 275 84 285" />
+  </g>
+</svg>
+
